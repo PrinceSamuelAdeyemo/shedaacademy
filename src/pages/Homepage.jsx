@@ -1,6 +1,12 @@
+//React imports
 import React from 'react'
- import { HelmetProvider, Helmet } from "react-helmet-async";
+import { HelmetProvider, Helmet } from "react-helmet-async";
 
+//Components
+import FAQ from '../components/FAQ';
+
+//Styling
+import "../assets/styles/homepage.css"
 
 const Homepage = () => {
   return (
@@ -25,9 +31,9 @@ const Homepage = () => {
 
       <div className='container flex flex-col gap-8 justify-center items-center'>
 
-        <div className='intro-div flex flex-col gap-4 h-[50vh] bg-red-600 w-[90%]'>
-          <div>
-            <p>Trusted by</p>
+        <div id='intro-div' className='flex flex-col items-center gap-4 h-[50vh] w-[90%]'>
+          <div className='flex justify-between outline-white border-2 border-white rounded-2xl text-white h-12 w-[85%]'>
+            <p className='text-black bg-white rounded-2xl'>Trusted by</p>
             <p>400+ Students</p>
             <p>imgs</p>
           </div>
@@ -142,65 +148,9 @@ const Homepage = () => {
           </div>
         </div>
 
-        <div id='faq' className=' w-[90%]'>
-          <h1>Frequently Asked Questions (FAQs)</h1>
-          <div className='faq-groupset'>
-            <div className='faq-group'>
-              <div className='faq-question'>
-                <p>How can I hire Sheda House for software design and development services?</p>
-                <button></button>
-                <div className='faq-answer'>
-                  <p>If you're interested in hiring our software design and development agency, simply reach out to us via email or phone. Our team will work closely with you to understand your needs and develop a custom solution tailored to your requirements.</p>
-                </div>
-              </div>
-              <div className='faq-question'>
-                <p>How can I hire Sheda House for software design and development services?</p>
-                <button></button>
-                <div className='faq-answer'>
-                  <p>If you're interested in hiring our software design and development agency, simply reach out to us via email or phone. Our team will work closely with you to understand your needs and develop a custom solution tailored to your requirements.</p>
-                </div>
-              </div>
-              <div className='faq-question'>
-                <p>How can I hire Sheda House for software design and development services?</p>
-                <button></button>
-                <div className='faq-answer'>
-                  <p>If you're interested in hiring our software design and development agency, simply reach out to us via email or phone. Our team will work closely with you to understand your needs and develop a custom solution tailored to your requirements.</p>
-                </div>
-              </div>
-              <div className='faq-question'>
-                <p>How can I hire Sheda House for software design and development services?</p>
-                <button></button>
-                <div className='faq-answer'>
-                  <p>If you're interested in hiring our software design and development agency, simply reach out to us via email or phone. Our team will work closely with you to understand your needs and develop a custom solution tailored to your requirements.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <FAQ />
 
-        <div id='conclusion' className=' w-[90%]'>
-          <h1></h1>
-          <p></p>
-          <div>
-            <button>Apply Now</button>
-            <button>Learn more</button>
-          </div>
-        </div>
-
-        <footer className='w-screen h-[95vh] bg-black text-white'>
-          <div id='connect'>
-
-          </div>
-          <div className='address'>
-
-          </div>
-          <div className='link'>
-
-          </div>
-          <div className='resource'>
-
-          </div>
-        </footer>
+        
 
       </div>
 </HelmetProvider>
