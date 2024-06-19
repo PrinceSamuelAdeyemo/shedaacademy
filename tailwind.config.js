@@ -10,6 +10,8 @@ export default {
         colors: {
           "env_green": "#254330",
           "lightenv_green": "#53C351",
+          "lightorange": "#C16E6F",
+          "shedaorange": "#FED8D8",
         },
       }
     ,

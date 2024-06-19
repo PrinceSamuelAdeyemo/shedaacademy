@@ -8,6 +8,9 @@ import FAQ from '../components/FAQ';
 //Styling
 import "../assets/styles/homepage.css"
 
+//Images
+import Instagrampurple from "../assets/icons/custom-icons/fa6-brands_instagram.svg"
+
 const Homepage = () => {
   return (
     <div className="w-screen overflow-hidden">
@@ -29,44 +32,53 @@ const Homepage = () => {
           <script src="landingpage.js"></script>
       </Helmet>
 
-      <div className='container flex flex-col gap-8 justify-center items-center'>
+      <div className='container flex flex-col gap-10 justify-center items-center'>
 
-        <div id='intro-div' className='flex flex-col items-center gap-4 h-[50vh] w-[90%]'>
-          <div className='flex justify-between outline-white border-2 border-white rounded-2xl text-white h-12 w-[85%]'>
-            <p className='text-black bg-white rounded-2xl'>Trusted by</p>
-            <p>400+ Students</p>
-            <p>imgs</p>
-          </div>
-          <div>
-            <h1>Take Your Career To The Next Level</h1>
-            <p>Sheda House Is a Creative Hub Located At The Heart Of Ibadan. We Are A Team of Creatives. Join Sheda House to interact, play, learn, create and discover.</p>
-          </div>
-          <div className='flex flex-col'>
-            <button className='bg-white text-red-600'>Take assessment</button>
-            <button className='text-white'>Download our brochure</button>
+        <div id='intro-div' className='flex flex-col justify-center items-center rounded-2xl h-[60vh] w-[90%]'>
+          <div className='flex flex-col items-center gap-8 w-[95%]'>
+            <div className='flex items-center justify-between outline-white border-2 border-white rounded-2xl text-white h-12 w-[85%]'>
+              <p className='text-black bg-white rounded-[0.5rem] w-24 text-center'>Trusted by</p>
+              <p>400+ Students</p>
+              <p>imgs</p>
+            </div>
+            <div className='text-white text-center'>
+              <h1 className='fontBlack text-4xl'>Take Your Career To The Next Level</h1>
+              <p>Sheda House Is a Creative Hub Located At The Heart Of Ibadan. We Are A Team of Creatives. Join Sheda House to interact, play, learn, create and discover.</p>
+            </div>
+            <div className='flex flex-col gap-2 w-[100%]'>
+              <button className='bg-white text-red-900 rounded-[0.5rem] h-10'>Take assessment</button>
+              <button className='text-white border-2 border-white rounded-[0.5rem] h-10'>Download our brochure</button>
+            </div>
           </div>
         </div>
+          
 
-        <div id='howitworks' className='flex flex-col w-[90%]'>
-          <p>How It Works</p>
-          <div className='flex'>
-            <p>1</p>
-            <div>
-              <p>Take assessment</p>
+        <div id='howitworks' className='flex flex-col gap-4 w-[90%]'>
+          <p className='text-center text-4xl mb-4'>How It Works</p>
+          <div className='flex gap-2 rounded-xl bg-yellow-100 p-3'>
+            <div className='text-center'>
+                <p className='bg-shedaorange w-6 h-6 rounded-full'>1</p>
+            </div>
+            <div className='flex flex-col gap-2'>
+              <p className='font-semibold'>Take assessment</p>
               <p>The assessment helps us to know if you qualify for the academy and recommend courses that are a good fit for you</p>
             </div>
           </div>
-          <div className='flex'>
-            <p>1</p>
-            <div>
-              <p>Take assessment</p>
+          <div className='flex gap-2 rounded-xl bg-yellow-100 p-3'>
+            <div className='text-center'>
+                <p className='bg-shedaorange w-6 h-6 rounded-full'>1</p>
+            </div>
+            <div className='flex flex-col gap-2'>
+              <p className='font-semibold'>Receive and review your results</p>
               <p>The assessment helps us to know if you qualify for the academy and recommend courses that are a good fit for you</p>
             </div>
           </div>
-          <div className='flex'>
-            <p>1</p>
-            <div>
-              <p>Pay tuition fee and lessons start</p>
+          <div className='flex gap-2 rounded-xl bg-yellow-100 p-3'>
+            <div className='text-center'>
+                <p className='bg-shedaorange w-6 h-6 rounded-full'>1</p>
+            </div>
+            <div className='flex flex-col gap-2'>
+              <p className='font-semibold'>Pay your tuition fee and lessons start</p>
               <p>The assessment helps us to know if you qualify for the academy and recommend courses that are a good fit for you</p>
             </div>
           </div>
@@ -75,7 +87,7 @@ const Homepage = () => {
         <div id='courses-offering' className=' w-[90%]'>
           <h1>Courses We Offer</h1>
           <div>
-            <p><img src="" alt="" /></p>
+            <p><i><span className='bg-red-500 w-full h-full'><img className='' src={Instagrampurple} alt="" /></span></i></p>
             <button>Physical</button>
             <p>Front End Web Development (Virtual)</p>
             <p>Become a Front End Web Developer in 4 months</p>

@@ -12,6 +12,9 @@ import Homepage from './pages/Homepage'
 import CourseInfo from './pages/CourseInfo'
 import AboutUS from './pages/AboutUS';
 
+//Styling
+import "../src/assets/styles/all.css"
+
 function App() {
   const [count, setCount] = useState(0)
 
