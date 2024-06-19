@@ -27,7 +27,7 @@ function App() {
         <Route path='/course/:course_name' element={<CourseInfo />} />
         <Route path='/aboutus' element={<AboutUS />} />
       </Routes>
-      <Conclusion />
+      {/* <Conclusion /> */}
       <Footer />
     </Router>
     

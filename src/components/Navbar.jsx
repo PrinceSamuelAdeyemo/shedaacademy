@@ -7,9 +7,9 @@ const Navbar = () => {
         <a className='navbar-logo-tag'><img className='navbar-logo' src="" alt="" />ACADEMY</a>
         
         <div className='navbar-menu'>
-            <div className='navbar-menu-line h-1 w-7 bg-gray-600 mb-1 mt-1'></div>
-            <div className='navbar-menu-line h-1 w-7 bg-gray-600 mb-1'></div>
-            <div className='nnavbar-menu-line h-1 w-7 bg-gray-600 mb-1'></div>
+            <div className='navbar-menu-line rounded-xl h-1 w-7 bg-gray-600 mb-1 mt-1'></div>
+            <div className='navbar-menu-line rounded-xl h-1 w-7 bg-gray-600 mb-1'></div>
+            <div className='navbar-menu-line rounded-xl h-1 w-7 bg-gray-600 mb-1'></div>
         </div>
         </div>
           

@@ -12,6 +12,9 @@ export default {
           "lightenv_green": "#53C351",
           "lightorange": "#C16E6F",
           "shedaorange": "#FED8D8",
+          "shedapagebg": "#FBF9F9",
+          "shedaicon-green": "#00990F",
+          "shedaicon-purple": "#9747FF",
         },
       }
     ,
