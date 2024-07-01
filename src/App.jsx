@@ -11,6 +11,8 @@ import Footer from './components/Footer';
 import Homepage from './pages/Homepage'
 import CourseInfo from './pages/CourseInfo'
 import AboutUS from './pages/AboutUS';
+import AssessmentForm from './pages/AssessmentForm';
+
 
 //Styling
 import "../src/assets/styles/all.css"
@@ -26,6 +28,7 @@ function App() {
         <Route exact path='/homepage' element={<Homepage />} />
         <Route path='/course/:course_name' element={<CourseInfo />} />
         <Route path='/aboutus' element={<AboutUS />} />
+        <Route path='/assessmentform' element={<AssessmentForm />} />
       </Routes>
       {/* <Conclusion /> */}
       <Footer />

@@ -1,6 +1,38 @@
-@font-face {
-    font-family: 'Lato-Black';
-    src: 
-        url(../font/lato/Lato-Black.ttf)
-        format('opentype');
+/* 
+
+#intro-div #lv1{
+    position: absolute;
+    height: 15vh;
+    width: 2rem;
+    background-image: url("../icons/custom-icons/incline 2.png");
+    background-clip: content-box;
+    background-size: fill;
+    background-repeat: no-repeat;
+    bottom: 0;
+    left: 1%;
 }
+
+#intro-div #lv2{
+    position: absolute;
+    height: 20vh;
+    width: 2rem;
+    background-image: url("../icons/custom-icons/incline-angle.svg");
+    background-clip: content-box;
+    background-size: fill;
+    background-repeat: no-repeat;
+    bottom: 0;
+    left: 5%;
+}
+
+#intro-div #lv3{
+    position: absolute;
+    height: 20vh;
+    width: 2rem;
+    background-image: url("../icons/custom-icons/incline 2.png");
+    background-clip: content-box;
+    background-size: fill;
+    background-repeat: no-repeat;
+    bottom: 0;
+    left: 15%;
+}
+ */

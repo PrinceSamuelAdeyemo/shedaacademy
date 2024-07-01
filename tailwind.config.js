@@ -15,6 +15,11 @@ export default {
           "shedapagebg": "#FBF9F9",
           "shedaicon-green": "#00990F",
           "shedaicon-purple": "#9747FF",
+          "shedainfo-yellow": "#FFA820",
+          "shedagray": "#757E9F",
+          "shedared": "#B30608",
+          "shedaoffwhite": "#F5F5F5",
+          "new": "#0099D9"
         },
       }
     ,

@@ -2,3 +2,35 @@
     background-image: url("../images/Rectangle 9.svg");
     background-size: cover;
 }
+
+
+.bar{
+    width: 2.5rem;
+    height: 0.2rem;
+    background-color: #777777;
+    margin: 0.5rem 0;
+    transform: rotate(180deg) translate(0, 0);
+    transition: transform 1s;
+    border-radius: 1rem;
+}
+
+
+.bar1{
+    width: 2.5rem;
+    height: 0.2rem;
+    background-color: #777777;
+    margin: 0.5rem 0;
+    transform: rotate(-45deg) translate(0, 0);
+    transition: 1s;
+    border-radius: 1rem;
+}
+
+.bar2{
+    width: 2.5rem;
+    height: 0.2rem;
+    background-color: #777777;
+    margin: 0.5rem 0;
+    transform: rotate(45deg) translate(-8px, -10px);
+    transition: 1s;
+    border-radius: 1rem;
+} 
