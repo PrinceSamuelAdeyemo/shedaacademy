@@ -8,19 +8,19 @@ const AssessmentForm = () => {
     <HelmetProvider>
         <Helmet>
             <title></title>
-          <meta name="viewport" content="width=device-width,initial-scale=1" />
-          
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
-          <link href="fontawesome-icons\css\all.css" rel="stylesheet" />
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <meta name="viewport" content="width=device-width,initial-scale=1" />
+            
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+            <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+            <link href="fontawesome-icons\css\all.css" rel="stylesheet" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-          <link rel="stylesheet" href="index.css" type="text/css" />
-          <link rel="stylesheet" href="output.css" type="text/css" />
+            <link rel="stylesheet" href="index.css" type="text/css" />
+            <link rel="stylesheet" href="output.css" type="text/css" />
 
-          <script src="landingpage.js"></script>
+            <script src="landingpage.js"></script>
         </Helmet>
 
         <div className='flex flex-col gap-4 bg-shedapagebg w-full pt-14 pb-24'>

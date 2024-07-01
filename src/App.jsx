@@ -12,13 +12,14 @@ import Homepage from './pages/Homepage'
 import CourseInfo from './pages/CourseInfo'
 import AboutUS from './pages/AboutUS';
 import AssessmentForm from './pages/AssessmentForm';
+import ApplicationForm from './pages/ApplicationForm';
 
 
 //Styling
 import "../src/assets/styles/all.css"
 
 function App() {
-  const [count, setCount] = useState(0)
+  //const [count, setCount] = useState(0)
 
   return (
     <Router>
@@ -29,6 +30,7 @@ function App() {
         <Route path='/course/:course_name' element={<CourseInfo />} />
         <Route path='/aboutus' element={<AboutUS />} />
         <Route path='/assessmentform' element={<AssessmentForm />} />
+        <Route path='/applicationform' element={<ApplicationForm />} />
       </Routes>
       {/* <Conclusion /> */}
       <Footer />
