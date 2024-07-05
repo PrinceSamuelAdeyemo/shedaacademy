@@ -21,6 +21,10 @@ export default {
           "shedaoffwhite": "#F5F5F5",
           "new": "#0099D9"
         },
+
+        fontFamily: {
+          lato: ['Lato', 'sans-serif'], // Define your custom font
+        },
       }
     ,
   },

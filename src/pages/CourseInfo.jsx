@@ -33,9 +33,9 @@ const CourseInfo = () => {
           <script src="landingpage.js"></script>
         </Helmet>
 
-        <div className='w-screen flex flex-col gap-10 justify-center items-center bg-shedapagebg overflow-x-hidden pb-10 md:gap-14 lg:gap-10 lg:flex-row'>
-            <div className='flex flex-col gap-4 w-[30%] justify-center items-center justify-self-start self-start'>
-                <div className='flex flex-col gap-4 w-[60%]'>
+        <div className='w-screen flex flex-col gap-10 justify-center items-center bg-shedapagebg overflow-x-hidden pt-16 pb-10 md:gap-14 lg:gap-10 lg:flex-row'>
+            <div className='flex flex-col gap-4 w-[25%] justify-center items-center justify-self-start self-start'>
+                <div className='flex flex-col gap-4 w-[30%]'>
                     <h1 className='w-3/4 font-semibold text-3xl'>{ course_name }</h1>
                     <div id='table-of-content' className='flex flex-col gap-6'>
                         <p className='font-medium text-2xl'>Overview</p>
@@ -51,8 +51,8 @@ const CourseInfo = () => {
                 </div>
             </div>
 
-            <div className='flex justify-center w-[75%]'>
-                <div className='flex flex-col gap-10 lg:gap-20 w-[90%]'>
+            <div className='flex justify-center w-full'>
+                <div className='flex flex-col gap-10 lg:gap-20 w-[85%]'>
                     
                     <Info />
 

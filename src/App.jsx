@@ -13,7 +13,9 @@ import CourseInfo from './pages/CourseInfo'
 import AboutUS from './pages/AboutUS';
 import AssessmentForm from './pages/AssessmentForm';
 import ApplicationForm from './pages/ApplicationForm';
-
+import Signin from './pages/Signin';
+import ForgotPassword from './pages/ForgotPassword';
+import ApplicationSuccess from './pages/ApplicationSuccess';
 
 //Styling
 import "../src/assets/styles/all.css"
@@ -31,6 +33,9 @@ function App() {
         <Route path='/aboutus' element={<AboutUS />} />
         <Route path='/assessmentform' element={<AssessmentForm />} />
         <Route path='/applicationform' element={<ApplicationForm />} />
+        <Route path='/sign-in' element={<Signin />} />
+        <Route path='/applicationsuccessful' element={<ApplicationSuccess />} />
+        <Route path='/forgotpassword' element={<ForgotPassword />} />
       </Routes>
       {/* <Conclusion /> */}
       <Footer />

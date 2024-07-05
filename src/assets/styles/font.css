@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'LatoBlack';
+    src: url('./font.css') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@layer base {
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/src/assets/font/lato/Lato-Black.ttf) format('ttf');
+}
+}
+
+  

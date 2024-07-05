@@ -1,9 +1,17 @@
-import React from 'react'
-import { HelmetProvider, Helmet } from "react-helmet-async";
+import React, { useState } from 'react'
+import { HelmetProvider, Helmet } from "react-helmet-async"
 
 import logo from "../assets/images/logo.svg"
+import "../assets/styles/all.css"
 
-const AssessmentForm = () => {
+
+const Signin = () => {
+    const [firstpage, SetFirstpage] = useState(true)
+
+    const togglepage = () => {
+        SetFirstpage(!firstpage);
+    }
+
   return (
     <HelmetProvider>
         <Helmet>
@@ -23,23 +31,23 @@ const AssessmentForm = () => {
             <script src="landingpage.js"></script>
         </Helmet>
 
-        <div className='flex flex-col gap-4 bg-shedapagebg w-full pt-14 pb-24'>
+        <div id='redimage' className='flex flex-col gap-4 bg-shedared w-full pt-14 pb-24'>
             <div className='logo flex justify-center items-center w-full'>
                 <img src={logo} alt="logo" />
-                <a className='navbar-logo-tag flex font-semibold'><img className='navbar-logo' src="" alt="" />ACADEMY</a>
+                <a className='navbar-logo-tag flex text-white'><img className='navbar-logo' src="" alt="" />ACADEMY</a>
             </div>
             <div className='formdiv flex flex-col justify-center items-center w-full'>
-                <form className='w-[90%] md:w-[75%] lg:w-1/2 bg-white shadow rounded-xl flex flex-col items-center justify-center gap-6 pt-10 pb-5'>
-                    <p className="font-semibold">Assessment form</p>
-                    <div className='flex flex-col gap-4 w-[90%]'>
-                        <p>Hours available for study in a day</p>
+                <form className='w-[90%] md:w-[75%] lg:w-1/2 bg-shedapagebg shadow rounded-xl flex flex-col items-center justify-center gap-6 pt-10 pb-5'>
+                    <p className='font-semibold'>Sign in</p>
+                    <div>
+                        <p>Email Address</p>
                         <input className='w-full shadow text-4xl bg-gray-100' type="text" />
-                        <p>Tell us why you are choosing tech/art</p>
-                        <input className='w-full shadow text-4xl bg-gray-100' type="text" />
-                        <p>Tell us why you are choosing sheda house</p>
-                        <input className='w-full shadow text-4xl bg-gray-100' type="text" />
-                        <button className='flex justify-center items-center mt-4 self-end bg-shedared text-white rounded-xl w-24 h-10'>Submit</button>
+                        <p>Password</p>
+                        <input className='w-full shadow text-4xl bg-gray-100' type="password" />
                     </div>
+
+                    <button className='text-white bg-shedared w-[15%] h-[2.5rem] rounded-xl'>Next</button>
+                    <a href="" className='text-shedared font-semibold underline'>Forgot password</a>
                     
                     
                 </form>
@@ -49,4 +57,4 @@ const AssessmentForm = () => {
   )
 }
 
-export default AssessmentForm
+export default Signin

@@ -30,7 +30,60 @@
     height: 0.2rem;
     background-color: #777777;
     margin: 0.5rem 0;
-    transform: rotate(45deg) translate(-8px, -10px);
+    transform: rotate(45deg) translate(-8px, -9px);
     transition: 1s;
     border-radius: 1rem;
 } 
+
+.faqva1{
+    width: 2.5rem;
+    height: 0.2rem;
+    background-color: #777777;
+    margin: 0.5rem 0;
+    transform: rotate(-45deg) translate(7px, 9px);
+    transition: 1s;
+    border-radius: 1rem;
+}
+
+.faqva2{
+    width: 2.5rem;
+    height: 0.2rem;
+    background-color: #777777;
+    margin: 0.5rem 0;
+    transform: rotate(45deg) translate(-6px, -10px);
+    transition: 1s;
+    border-radius: 1rem;
+}
+
+.faqva3{
+    width: 2.5rem;
+    height: 0.2rem;
+    margin: 0.5rem 0;
+    transform: rotate(45deg) translate(6px, -10px);
+    transition: 1s;
+    border-radius: 1rem;
+}
+
+.faqva4{
+    width: 2.5rem;
+    height: 0.2rem;
+    margin: 0.5rem 0;
+    transform: rotate(-45deg) translate(11px, -10px);
+    transition: 1s;
+    border-radius: 1rem;
+}
+
+
+.rotate_270 {
+    transform: rotate(287deg) translate(0, 0);
+}
+
+.rotate_360 {
+    --tw-rotate: 360deg;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rotate_test{
+    
+    transform: rotate(-72deg) translate(0, 0);
+}

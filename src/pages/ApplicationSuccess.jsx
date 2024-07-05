@@ -1,9 +1,23 @@
-import React from 'react'
-import { HelmetProvider, Helmet } from "react-helmet-async";
+import React, { useState } from 'react'
+import { HelmetProvider, Helmet } from "react-helmet-async"
+import Navbar from '../components/Navbar'
+import { useNavigate } from 'react-router-dom'
 
 import logo from "../assets/images/logo.svg"
+import correct from "../assets/images/Frame 129.png"
 
-const AssessmentForm = () => {
+const ApplicationSuccess = () => {
+    const navigate = useNavigate()
+    const [firstpage, SetFirstpage] = useState(true)
+
+    const togglepage = () => {
+        SetFirstpage(!firstpage);
+    }
+
+    const toHome = () => {
+        navigate("/")
+    }
+
   return (
     <HelmetProvider>
         <Helmet>
@@ -29,24 +43,21 @@ const AssessmentForm = () => {
                 <a className='navbar-logo-tag flex font-semibold'><img className='navbar-logo' src="" alt="" />ACADEMY</a>
             </div>
             <div className='formdiv flex flex-col justify-center items-center w-full'>
-                <form className='w-[90%] md:w-[75%] lg:w-1/2 bg-white shadow rounded-xl flex flex-col items-center justify-center gap-6 pt-10 pb-5'>
-                    <p className="font-semibold">Assessment form</p>
-                    <div className='flex flex-col gap-4 w-[90%]'>
-                        <p>Hours available for study in a day</p>
-                        <input className='w-full shadow text-4xl bg-gray-100' type="text" />
-                        <p>Tell us why you are choosing tech/art</p>
-                        <input className='w-full shadow text-4xl bg-gray-100' type="text" />
-                        <p>Tell us why you are choosing sheda house</p>
-                        <input className='w-full shadow text-4xl bg-gray-100' type="text" />
-                        <button className='flex justify-center items-center mt-4 self-end bg-shedared text-white rounded-xl w-24 h-10'>Submit</button>
+                <div className='w-[90%] md:w-[75%] lg:w-1/2 bg-white shadow rounded-xl flex flex-col items-center justify-center gap-6 pt-10 pb-5'>
+                    <p className='font-semibold'>Academy Application</p>
+                    <img src={correct} alt="" />
+                    <p className='font-semibold text-shedared'>Application Received</p>
+                    <div className='flex gap-1'>
+                        <div className='w-3 h-3 rounded-[50%] bg-shedared'></div>
+                        <div className='w-3 h-3 rounded-[50%] bg-shedared'></div>
                     </div>
-                    
-                    
-                </form>
+                    <button className='bg-shedared text-white font-semibold w-[8rem] h-[2rem] rounded-xl'>Back to Home</button>
+                </div>
+                
             </div>
         </div>
     </HelmetProvider>
   )
 }
 
-export default AssessmentForm
+export default ApplicationSuccess

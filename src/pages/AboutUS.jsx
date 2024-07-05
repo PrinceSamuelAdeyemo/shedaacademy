@@ -11,7 +11,7 @@ import CourseinfoVid from "../assets/images/Frame 103.svg"
 
 const AboutUS = () => {
   return (
-    <div className='container flex flex-col gap-10 items-center pb-10'>
+    <div className='flex flex-col gap-24 items-center pb-10'>
       <div className='flex flex-col items-center bg-shedared text-white pt-8 pb-10'>
         <div id='aboutus' className='flex flex-col w-[90%] gap-6'>
           <p className='font-semibold text-4xl'>About us</p>
@@ -38,14 +38,14 @@ const AboutUS = () => {
           <button className='bg-white text-shedared text-xl font-semibold w-40 h-10 rounded-xl'>Learn more</button>
         </div>
 
-        <div className='w-full flex justify-center'>
-          <img className='w-[90%] bg-cover' src={CourseinfoVid} alt="Video of sheda house" />
+        <div className='w-full flex justify-center h-[80vh]'>
+          <img className='w-[90%] object-cover' src={CourseinfoVid} alt="Video of sheda house" />
         </div>
       </div>
 
       <SendMessageForm />
 
-      <div className='faq-group flex flex-col items-center gap-10'>
+      <div className='faq-group flex flex-col items-center gap-10 w-[90%]'>
         <FAQ />
         <FAQ />
         <FAQ />
