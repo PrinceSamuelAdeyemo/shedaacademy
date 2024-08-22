@@ -32,15 +32,15 @@ const Signin = () => {
             <script src="landingpage.js"></script>
         </Helmet>
 
-        <div id='redimage' className="flex flex-col gap-4 pt-14 pb-24 w-full h-[130vh] bg-sign_in_img bg-[length:100%_100%] bg-no-repeat bg-clip-border">
+        <div id='redimage' className="flex flex-col gap-4 pt-14 pb-24 w-full h-[120vh] bg-sign_in_img bg-[length:100%_100%] bg-no-repeat bg-clip-border">
             <div className='logo flex justify-center items-center w-full'>
                 <img src={logo} alt="logo" />
                 <a className='navbar-logo-tag flex text-white' href='/'><img className='navbar-logo' src="" alt="" />ACADEMY</a>
             </div>
             <div className='formdiv flex flex-col justify-center items-center w-full'>
-                <form className='w-[90%] md:w-[75%] lg:w-1/2 bg-shedapagebg shadow rounded-xl flex flex-col items-center justify-center gap-6 pt-10 pb-5'>
-                    <p className='font-semibold'>Sign in</p>
-                    <div>
+                <form className='w-[90%] md:w-[75%] lg:w-[40%] bg-shedapagebg shadow rounded-xl flex flex-col items-center justify-center gap-6 pt-10 pb-5 px-10'>
+                    <p className='font-semibold w-full text-center'>Sign in</p>
+                    <div className='w-full'>
                         <p>Email Address</p>
                         <input className='w-full shadow text-4xl bg-gray-100' type="text" />
                         <p>Password</p>
@@ -48,7 +48,7 @@ const Signin = () => {
                     </div>
 
                     <button className='text-white bg-shedared w-[15%] h-[2.5rem] rounded-xl'>Next</button>
-                    <a href="/" className='text-shedared font-semibold underline'>Forgot password</a>
+                    <a href="/forgotpassword" className='text-shedared font-semibold underline'>Forgot password</a>
                     
                     
                 </form>

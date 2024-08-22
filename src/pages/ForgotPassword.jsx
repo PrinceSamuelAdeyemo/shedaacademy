@@ -31,16 +31,16 @@ const ForgotPassword = () => {
             <script src="landingpage.js"></script>
         </Helmet>
 
-        <div id='redimage' className='flex flex-col gap-4 bg-shedared w-full pt-14 pb-24'>
+        <div id='redimage' className='flex flex-col gap-4 w-full pt-14 pb-24 h-[120vh] bg-sign_in_img bg-[length:100%_100%] bg-no-repeat bg-clip-border'>
             <div className='logo flex justify-center items-center w-full'>
                 <img src={logo} alt="logo" />
-                <a className='navbar-logo-tag flex text-white'><img className='navbar-logo' src="" alt="" />ACADEMY</a>
+                <a className='navbar-logo-tag flex text-white' href='/'><img className='navbar-logo' src="" alt="" />ACADEMY</a>
             </div>
             <div className='formdiv flex flex-col justify-center items-center w-full'>
-                <form className='w-[90%] md:w-[75%] lg:w-1/2 bg-shedapagebg shadow rounded-xl flex flex-col items-center justify-center gap-6 pt-10 pb-5'>
-                    <p className='font-semibold'>Sign in</p>
+                <form className='w-[90%] md:w-[75%] lg:w-[40%] bg-shedapagebg shadow rounded-xl flex flex-col items-center justify-center gap-6 pt-10 pb-5 px-10'>
+                    <p className='font-semibold'>Forgot Password</p>
                     <p>Enter the email address you used to  create an account, and you will receive a link to reset your password.</p>
-                    <div>
+                    <div className='w-full'>
                         <p>Email Address</p>
                         <input className='w-full shadow text-4xl bg-gray-100' type="text" />
                         
