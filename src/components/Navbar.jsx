@@ -82,7 +82,7 @@ const Navbar = () => {
               <li className='font-semibold text-white'><a href="/aboutus">About US</a></li>
               <li className='font-semibold text-white'>Testimonials</li>
               <li className='font-semibold text-white'>FAQ</li>
-              <li className='border-4 rounded-xl border-shedared bg-white text-shedared font-semibold h-14 w-[90%] text-center flex items-center justify-center self-center justify-self-center'>Signup</li>
+              <li className='border-4 rounded-xl border-shedared bg-white text-shedared font-semibold h-14 w-[90%] text-center flex items-center justify-center self-center justify-self-center'><a href="">Signup</a></li>
               <li className='border-4 rounded-xl border-shedared bg-white text-shedared font-semibold h-14 w-[90%] text-center flex items-center justify-center'><a href="/assessmentform">Take Assessment</a></li>
             </ul>
           </div>

@@ -21,7 +21,9 @@ export default {
           "shedaoffwhite": "#F5F5F5",
           "new": "#0099D9"
         },
-
+        backgroundImage: {
+          "sign_in_img": "url('./src/assets/images/Sheda Academy - Sign in form.png')"
+        },
         fontFamily: {
           lato: ['Lato', 'sans-serif'], // Define your custom font
         },

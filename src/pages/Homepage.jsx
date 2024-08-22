@@ -71,30 +71,30 @@ const Homepage = () => {
 
         <div id='intro-div' className='flex flex-col justify-center items-center rounded-2xl bg-shedared h-[70vh] w-[90%] relative'>
           <div className='flex flex-col items-center gap-8 w-[95%] sm:w-[60%] md:w-[50%] lg:w-[90%]'>
-            <div className='flex items-center justify-between outline-white border-2 border-white rounded-2xl text-white h-12 w-[85%] sm:w-[65%] lg:w-[30%] xl:w-[20%]'>
+            <div className='flex items-center justify-between outline-white border-2 border-white rounded-2xl text-white h-12 w-[85%] sm:w-[65%] lg:w-[30%] xl:w-[27%]'>
               <p className='text-black bg-white rounded-[0.5rem] w-24 text-center'>Trusted by</p>
               <p>400+ Students</p>
-              <div className='flex z-10'>
-                <img src={img1} alt="" />
-                <img src={img1} alt="" />
-                <img src={img1} alt="" />
+              <div className='flex bg-red-500 z-10 relative'>
+                <img className='absolute w-full h-full' src={img1} alt="" />
+                <img className='absolute' src={img1} alt="" />
+                <img className='absolute' src={img1} alt="" />
               </div>
             </div>
             <div className='text-white text-center flex flex-col gap-4 md:w-[50vw] md:gap-8 xl:w-[40vw] z-10'>
               <h1 className='fontBlack font-bold text-4xl lg:text-6xl'>Take Your Career To The Next Level</h1>
               <p>Sheda House Is a Creative Hub Located At The Heart Of Ibadan. We Are A Team of Creatives. Join Sheda House to interact, play, learn, create and discover.</p>
             </div>
-            <div className='flex flex-col justify-center items-center gap-2 w-[90%] lg:flex-row md:w-[100%] lg:w-[65%] xl:w-[30%]'>
-              <button className='bg-white text-shedared font-bold rounded-[0.5rem] w-full lg:w-1/2 h-[6vh] px-10 z-10' onClick = {goToAssessment}>Take assessment</button>
-              <button className='text-white border-2 border-white rounded-[0.5rem] w-full lg:w-1/2 h-[6vh] px-10 z-10'>Download our brochure</button>
+            <div className='flex flex-col justify-center items-center gap-2 w-[90%] lg:flex-row md:w-[100%] lg:w-[65%] xl:w-[40%]'>
+              <button className='bg-white text-[15px] text-shedared font-bold rounded-[0.5rem] w-full lg:w-1/2 h-[6vh] px-10 z-10' onClick = {goToAssessment}>Take assessment</button>
+              <button className='text-white text-[15px] border-2 border-white rounded-[0.5rem] w-full lg:w-1/2 h-[6vh] z-10'>Download our brochure</button>
             </div>
           </div>
 
 
-          <div className='flex h-full w-full absolute md:h-1/2 lg:flex lg:h-2/3 lg:w-8/12 opacity-1 bg-none border-none'>
+          <div className='flex h-full w-full absolute lg:flex lg:h-full lg:w-8/12 opacity-1 bg-none border-none'>
             <div className='relative h-full w-full'>
-              <div className='absolute top-[25%] -left-12 lg:-left-64 xl:left-0 xl:top-[0%]'><img src={lv7} alt="" /></div>
-              <div className='absolute top-[25%] left-12 lg:-left-32 xl:left-[15%] xl:top-[0%]'><img src={lv7} alt="" /></div>
+              <div className='absolute top-[25%] -left-12 md:top-0 md:-right-10 lg:-left-64 xl:left-0 xl:top-[0%]'><img src={lv7} alt="" /></div>
+              <div className='absolute top-[25%] left-12 md:top-0 md:-right-96 lg:-left-32 xl:left-[15%] xl:top-[0%]'><img src={lv7} alt="" /></div>
               <div className='hidden lg:block absolute lg:-right-64 xl:left-[40%] xl:top-[0%]'><img src={lv7} alt="" /></div>
             </div>
           </div>
@@ -154,7 +154,7 @@ const Homepage = () => {
 
           <div className='flex justify-center bg-white rounded-xl py-4 w-[80%]'>
             <div className='flex flex-col w-[90%] gap-4 md:flex-row md:w-[95%]'>
-              <div className='flex flex-col gap-4 w-full'>
+              <div className='flex flex-col gap-4 w-full lg:w-[40%]'>
                 <p className='flex justify-center items-center rounded-xl bg-shedaicon-purple w-12 h-12'><i><span><img className='' src={Instagrampurple} alt="" /></span></i></p>
                 <div className='flex flex-col gap-4 justify-end h-full'>
                   <p className='border-2 rounded-2xl bg-grey-900 text-gray-500 w-20 text-center'>Physical</p>
@@ -163,15 +163,15 @@ const Homepage = () => {
                   <button onClick = {tofrontend} className='px-10 border-2 border-gray-50 text-shedared text-left font-medium flex justify-between rounded-2xl h-10 ps-2'>Learn more <i className='flex fa fa-arrow-right self-center'><span></span></i></button>
                 </div>
               </div>
-              <div className='skill-img-div w-full'>
-                <img className='w-full h-[30vh] md:h-[50vh] object-cover' src={CoursePicBGPurple} alt="" />
+              <div className='skill-img-div w-full lg:w-[60%]'>
+                <img className='w-full h-[30vh] md:h-[40vh] object-cover' src={CoursePicBGPurple} alt="" />
               </div>
             </div>
           </div>
 
           <div className='flex justify-center bg-white rounded-xl py-4 w-[80%]'>
             <div className='flex flex-col w-[90%] gap-4 md:flex-row md:w-[95%]'>
-              <div className='flex flex-col gap-4 w-full'>
+              <div className='flex flex-col gap-4 w-full lg:w-[40%]'>
                 <p className='flex justify-center items-center rounded-xl bg-shedaicon-green w-12 h-12'><i><span><img className='' src={Instagramgreen} alt="" /></span></i></p>
                 <div className='flex flex-col gap-4 justify-end h-full'>
                   <p className='border-2 rounded-2xl bg-grey-900 text-gray-500 w-20 text-center'>Physical</p>
@@ -180,15 +180,15 @@ const Homepage = () => {
                   <button onClick = {tofrontend} className='px-10 border-2 border-gray-50 text-shedared text-left font-medium flex justify-between rounded-2xl h-10 ps-2'>Learn more <i className='flex fa fa-arrow-right self-center'><span></span></i></button>
                 </div>
               </div>
-              <div className='skill-img-div w-full'>
-                <img className='w-full h-[30vh] md:h-[50vh] object-cover' src={CoursePicBGGreen} alt="" />
+              <div className='skill-img-div w-full lg:w-[60%]'>
+                <img className='w-full h-[30vh] md:h-[40vh] object-cover' src={CoursePicBGGreen} alt="" />
               </div>
             </div>
           </div>
 
           <div className='flex justify-center bg-white rounded-xl py-4 w-[80%]'>
             <div className='flex flex-col w-[90%] gap-4 md:flex-row md:w-[95%]'>
-              <div className='flex flex-col gap-4 w-full'>
+              <div className='flex flex-col gap-4 w-full lg:w-[40%]'>
                 <p className='flex justify-center items-center rounded-xl bg-shedaicon-purple w-12 h-12'><i><span><img className='' src={Instagramyellow} alt="" /></span></i></p>
                 <div className='flex flex-col gap-4 justify-end h-full'>
                   <p className='border-2 rounded-2xl bg-grey-900 text-gray-500 w-20 text-center'>Physical</p>
@@ -197,15 +197,15 @@ const Homepage = () => {
                   <button onClick = {tofrontend} className='px-10 border-2 border-gray-50 text-shedared text-left font-medium flex justify-between rounded-2xl h-10 ps-2'>Learn more <i className='flex fa fa-arrow-right self-center'><span></span></i></button>
                 </div>
               </div>
-              <div className='skill-img-div w-full'>
-                <img className='w-full h-[30vh] md:h-[50vh] object-cover' src={CoursePicBGYellow} alt="" />
+              <div className='skill-img-div w-full lg:w-[60%]'>
+                <img className='w-full h-[30vh] md:h-[40vh] object-cover' src={CoursePicBGYellow} alt="" />
               </div>
             </div>
           </div>
 
           <div className='flex justify-center bg-white rounded-xl py-4 w-[80%]'>
             <div className='flex flex-col w-[90%] gap-4 md:flex-row md:w-[95%]'>
-              <div className='flex flex-col gap-4 w-full'>
+              <div className='flex flex-col gap-4 w-full lg:w-[40%]'>
                 <p className='flex justify-center items-center rounded-xl bg-shedaicon-purple w-12 h-12'><i><span><img className='' src={Instagrampurple} alt="" /></span></i></p>
                 <div className='flex flex-col gap-4 justify-end h-full'>
                   <p className='border-2 rounded-2xl bg-grey-900 text-gray-500 w-20 text-center'>Physical</p>
@@ -214,12 +214,11 @@ const Homepage = () => {
                   <button onClick = {tofrontend} className='px-10 border-2 border-gray-50 text-shedared text-left font-medium flex justify-between rounded-2xl h-10 ps-2'>Learn more <i className='flex fa fa-arrow-right self-center'><span></span></i></button>
                 </div>
               </div>
-              <div className='skill-img-div w-full'>
-                <img className='w-full h-[30vh] md:h-[50vh] object-cover' src={CoursePicBGPurple} alt="" />
+              <div className='skill-img-div w-full lg:w-[60%]'>
+                <img className='w-full h-[30vh] md:h-[40vh] object-cover' src={CoursePicBGPurple} alt="" />
               </div>
             </div>
           </div>
-
         </div>
 
         <div id='' className='flex flex-col gap-4 w-[90%] md:w-[70%] md:flex-row-reverse'>
@@ -246,10 +245,10 @@ const Homepage = () => {
           </div>
         </div>
 
-        <div id='faq' className='flex flex-col gap-4 w-[90%] mb-4 md:w-[70%]'>
+        <div id='faq' className='flex flex-col gap-10 w-[90%] mb-4 md:w-[70%]'>
           <h1 className='font-semibold text-3xl'>Frequently Asked Questions (FAQs)</h1>
           <div className='faq-groupset'>
-            <div className='faq-group flex flex-col gap-10'>
+            <div className='faq-group flex flex-col gap-10 items-center'>
                 <FAQ />
                 <FAQ />
                 <FAQ />

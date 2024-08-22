@@ -35,12 +35,11 @@ const CourseInfo = () => {
 
         <div className='w-screen flex flex-col gap-10 justify-center items-center bg-shedapagebg overflow-x-hidden pt-16 pb-10 md:gap-14 lg:gap-10 lg:flex-row'>
             <div className='flex flex-col gap-4 w-[25%] justify-center items-center justify-self-start self-start'>
-                <div className='flex flex-col gap-4 w-[30%]'>
+                <div className='flex flex-col gap-4 w-[70%] md:w-[30%]'>
                     <h1 className='w-3/4 font-semibold text-3xl'>{ course_name }</h1>
                     <div id='table-of-content' className='flex flex-col gap-6'>
                         <p className='font-medium text-2xl'>Overview</p>
                         <ul className='flex flex-col gap-4 font-medium text-gray-500'>
-                            
                             <li>Requirements</li>
                             <li>Course Outline</li>
                             <li>Pricing</li>
@@ -82,7 +81,7 @@ const CourseInfo = () => {
                         <h1 className='font-medium text-2xl'>Pricing</h1>
                         <div className='w-full text-center flex flex-col gap-3 justify-center items-center py-4 bg-white rounded-2xl'>
                             <p className='font-medium text-[1rem] text-shedagray'>Installment</p>
-                            <div className='flex justify-center w-[90%]'>
+                            <div className='flex justify-center w-[90%] bg-red-500'>
                                 <h1 className='font-bold text-5xl'>₦60K</h1>
                                 <div className='flex flex-col justify-end p-0'>
                                     <p className='w-full m-0 text-sheda-gray font-semibold text-[0.9rem]'>/quarter (every 3 months)</p>
@@ -92,7 +91,7 @@ const CourseInfo = () => {
                         </div>
                         <div className='w-full text-center flex flex-col gap-3 justify-center items-center py-4 bg-white rounded-2xl'>
                             <p className='font-medium text-[1rem] text-shedagray'>One-off</p>
-                            <div className='flex justify-center w-[90%]'>
+                            <div className='flex justify-center w-[90%] bg-red-500'>
                                 <h1 className='font-bold text-5xl'>₦240K</h1>
                                 <div className='flex flex-col justify-end p-0'>
                                     <p className='w-full m-0 text-sheda-gray font-semibold text-[0.9rem]'>/1 Year</p>
