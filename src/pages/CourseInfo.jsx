@@ -81,7 +81,7 @@ const CourseInfo = () => {
                         <h1 className='font-medium text-2xl'>Pricing</h1>
                         <div className='w-full text-center flex flex-col gap-3 justify-center items-center py-4 bg-white rounded-2xl'>
                             <p className='font-medium text-[1rem] text-shedagray'>Installment</p>
-                            <div className='flex justify-center w-[90%] bg-red-500'>
+                            <div className='flex justify-center w-[90%]'>
                                 <h1 className='font-bold text-5xl'>₦60K</h1>
                                 <div className='flex flex-col justify-end p-0'>
                                     <p className='w-full m-0 text-sheda-gray font-semibold text-[0.9rem]'>/quarter (every 3 months)</p>
@@ -91,7 +91,7 @@ const CourseInfo = () => {
                         </div>
                         <div className='w-full text-center flex flex-col gap-3 justify-center items-center py-4 bg-white rounded-2xl'>
                             <p className='font-medium text-[1rem] text-shedagray'>One-off</p>
-                            <div className='flex justify-center w-[90%] bg-red-500'>
+                            <div className='flex justify-center w-[90%] '>
                                 <h1 className='font-bold text-5xl'>₦240K</h1>
                                 <div className='flex flex-col justify-end p-0'>
                                     <p className='w-full m-0 text-sheda-gray font-semibold text-[0.9rem]'>/1 Year</p>

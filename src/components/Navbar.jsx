@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
+import Footer from "../components/Footer"
 import logo from "../assets/images/logo.svg"
 import { useNavigate } from "react-router-dom"
-
+import { Outlet } from 'react-router-dom'
 
 
 import lv1 from "../assets/images/Vector 18.svg"
@@ -38,11 +39,12 @@ const Navbar = () => {
   }
 
   return (
-    <nav className='flex flex-row align-middle w-screen justify-center h-14 bg-shedapagebg relative sm:h-20'>
+    <div>
+      <nav className='flex flex-row align-middle w-screen justify-center h-14 bg-shedapagebg relative sm:h-20'>
         <div className='flex w-[95%] lg:w-[90%] justify-between items-center '>
           <div className='items-center flex' onClick={goToHome}>
             <img src={logo} alt="logo" />
-            <a className='navbar-logo-tag flex text-shedared font-semibold'><img className='navbar-logo' src="" alt="" />ACADEMY</a>
+            <a className='navbar-logo-tag flex text-shedared font-semibold' href='/'><img className='navbar-logo' src="" alt="" />ACADEMY</a>
           </div> 
           <div className='hidden lg:flex lg:justify-between items-center'>
             <ul className='lg:flex lg:gap-10'>
@@ -89,7 +91,15 @@ const Navbar = () => {
 
         </div>
           
-    </nav>
+      </nav>
+
+      <div>
+        <Outlet />
+      </div>
+
+      <Footer></Footer>
+    </div>
+    
   )
 }
 

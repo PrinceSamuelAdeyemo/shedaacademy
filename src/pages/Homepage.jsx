@@ -60,7 +60,6 @@ const Homepage = () => {
           <link href="fontawesome-icons\css\all.css" rel="stylesheet" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
           <link rel="stylesheet" href="index.css" type="text/css" />
           <link rel="stylesheet" href="output.css" type="text/css" />
 
@@ -71,13 +70,13 @@ const Homepage = () => {
 
         <div id='intro-div' className='flex flex-col justify-center items-center rounded-2xl bg-shedared h-[70vh] w-[90%] relative'>
           <div className='flex flex-col items-center gap-8 w-[95%] sm:w-[60%] md:w-[50%] lg:w-[90%]'>
-            <div className='flex items-center justify-between outline-white border-2 border-white rounded-2xl text-white h-12 w-[85%] sm:w-[65%] lg:w-[30%] xl:w-[27%]'>
-              <p className='text-black bg-white rounded-[0.5rem] w-24 text-center'>Trusted by</p>
-              <p>400+ Students</p>
-              <div className='flex bg-red-500 z-10 relative'>
-                <img className='absolute w-full h-full' src={img1} alt="" />
-                <img className='absolute' src={img1} alt="" />
-                <img className='absolute' src={img1} alt="" />
+            <div className='flex gap-0 lg:gap-2 items-center justify-between px-1 md:px-2 outline-white border-2 border-white rounded-xl h-8 lg:h-12 w-[80%] sm:w-[65%] md:max-w-[70%] lg:max-w-[60%] xl:w-[27%]'>
+              <p className='text-gray-700 bg-white rounded-md text-[70%] w-[30%] md:text-[70%] lg:text-lg lg:w-24 text-center font-bold'>Trusted by</p>
+              <p className='text-shedared font-bold text-[90%] md:text-md lg:text-2xl text-center text-white'>400+ Students</p>
+              <div className='flex items-center z-10 relative w-[20%] md:w-[25%] lg:w-[20%] h-full'>
+                <img className='absolute h-5 lg:h-2/3' src={img1} alt="" />
+                <img className='absolute h-5 lg:h-2/3 left-3 md:left-3 lg:left-4' src={img1} alt="" />
+                <img className='absolute h-5 lg:h-2/3 left-6 md:left-6 lg:left-8' src={img1} alt="" />
               </div>
             </div>
             <div className='text-white text-center flex flex-col gap-4 md:w-[50vw] md:gap-8 xl:w-[40vw] z-10'>
@@ -85,8 +84,8 @@ const Homepage = () => {
               <p>Sheda House Is a Creative Hub Located At The Heart Of Ibadan. We Are A Team of Creatives. Join Sheda House to interact, play, learn, create and discover.</p>
             </div>
             <div className='flex flex-col justify-center items-center gap-2 w-[90%] lg:flex-row md:w-[100%] lg:w-[65%] xl:w-[40%]'>
-              <button className='bg-white text-[15px] text-shedared font-bold rounded-[0.5rem] w-full lg:w-1/2 h-[6vh] px-10 z-10' onClick = {goToAssessment}>Take assessment</button>
-              <button className='text-white text-[15px] border-2 border-white rounded-[0.5rem] w-full lg:w-1/2 h-[6vh] z-10'>Download our brochure</button>
+              <button className='bg-white text-[15px] text-shedared font-bold rounded-[0.5rem] w-full lg:w-1/2  h-[6vh] px-10 z-10' onClick = {goToAssessment}>Take assessment</button>
+              <button className='text-white text-[15px] border-2 border-white rounded-[0.5rem] w-full lg:w-1/2  h-[6vh] z-10'>Download our brochure</button>
             </div>
           </div>
 
