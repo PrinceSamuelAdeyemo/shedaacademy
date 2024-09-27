@@ -33,7 +33,7 @@ const ApplicationForm = () => {
         <div className='flex flex-col gap-4 bg-shedapagebg w-full pt-14 pb-24'>
             <div className='logo flex justify-center items-center w-full'>
                 <img src={logo} alt="logo" />
-                <a className='navbar-logo-tag flex'><img className='navbar-logo' src="" alt="" />ACADEMY</a>
+                <a className='navbar-logo-tag flex font-semibold' href='/'><img className='navbar-logo' src="" alt="" />ACADEMY</a>
             </div>
             <div className='formdiv flex flex-col justify-center items-center w-full'>
                 <form className='w-[90%] md:w-[75%] lg:w-1/2 bg-white shadow rounded-xl flex flex-col items-center justify-center gap-6 pt-10 pb-5'>

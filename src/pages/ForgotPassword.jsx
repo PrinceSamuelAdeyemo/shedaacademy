@@ -1,9 +1,17 @@
-import React from 'react'
-import { HelmetProvider, Helmet } from "react-helmet-async";
+import React, { useState } from 'react'
+import { HelmetProvider, Helmet } from "react-helmet-async"
+import "../assets/styles/all.css"
 
 import logo from "../assets/images/logo.svg"
 
-const AssessmentForm = () => {
+
+const ForgotPassword = () => {
+    const [firstpage, SetFirstpage] = useState(true)
+
+    const togglepage = () => {
+        SetFirstpage(!firstpage);
+    }
+
   return (
     <HelmetProvider>
         <Helmet>
@@ -23,23 +31,23 @@ const AssessmentForm = () => {
             <script src="landingpage.js"></script>
         </Helmet>
 
-        <div className='flex flex-col gap-4 bg-shedapagebg w-full pt-14 pb-24'>
+        <div id='redimage' className='flex flex-col gap-4 w-full pt-14 pb-24 h-[120vh] bg-sign_in_img bg-[length:100%_100%] bg-no-repeat bg-clip-border'>
             <div className='logo flex justify-center items-center w-full'>
                 <img src={logo} alt="logo" />
-                <a className='navbar-logo-tag flex font-semibold'><img className='navbar-logo' src="" alt="" />ACADEMY</a>
+                <a className='navbar-logo-tag flex text-white' href='/'><img className='navbar-logo' src="" alt="" />ACADEMY</a>
             </div>
             <div className='formdiv flex flex-col justify-center items-center w-full'>
-                <form className='w-[90%] md:w-[75%] lg:w-1/2 bg-white shadow rounded-xl flex flex-col items-center justify-center gap-6 pt-10 pb-5'>
-                    <p className="font-semibold">Assessment form</p>
-                    <div className='flex flex-col gap-4 w-[90%]'>
-                        <p>Hours available for study in a day</p>
+                <form className='w-[90%] md:w-[75%] lg:w-[40%] bg-shedapagebg shadow rounded-xl flex flex-col items-center justify-center gap-6 pt-10 pb-5 px-10'>
+                    <p className='font-semibold'>Forgot Password</p>
+                    <p>Enter the email address you used to  create an account, and you will receive a link to reset your password.</p>
+                    <div className='w-full'>
+                        <p>Email Address</p>
                         <input className='w-full shadow text-4xl bg-gray-100' type="text" />
-                        <p>Tell us why you are choosing tech/art</p>
-                        <input className='w-full shadow text-4xl bg-gray-100' type="text" />
-                        <p>Tell us why you are choosing sheda house</p>
-                        <input className='w-full shadow text-4xl bg-gray-100' type="text" />
-                        <button className='flex justify-center items-center mt-4 self-end bg-shedared text-white rounded-xl w-24 h-10'>Submit</button>
+                        
                     </div>
+
+                    <button className='text-white bg-shedared w-[15%] h-[2.5rem] rounded-xl'>Submit</button>
+                    <a href="" className='text-shedared font-semibold underline'>Submit</a>
                     
                     
                 </form>
@@ -49,4 +57,4 @@ const AssessmentForm = () => {
   )
 }
 
-export default AssessmentForm
+export default ForgotPassword
