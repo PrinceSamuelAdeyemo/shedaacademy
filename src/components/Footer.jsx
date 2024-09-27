@@ -9,7 +9,7 @@ import Emaillogo from "../assets/icons/custom-icons/fa6-brands_x-email.svg"
 
 const Footer = () => {
   return (
-    <footer className='flex flex-col items-center w-screen bg-black gap-20 text-white pt-8 pb-2 md:gap-32 md:h-[40vh]'>
+    <footer className='flex flex-col items-center w-screen bg-black gap-[5%] text-white pt-4 lg:pt-8 pb-2 md:gap-32 h-[100vh] md:h-[40vh] lg:min-h-[58vh]'>
       <div className='flex flex-col gap-3 w-[90%] md:flex-row'>
         <div id='connect' className='flex flex-col md:w-[25%]'>
           <p className='font-medium'>Connect with us</p>
@@ -22,11 +22,11 @@ const Footer = () => {
         </div>
         <div className='address flex flex-col w-[40%] md:w-[25%]'>
           <p className='font-medium'>Our Address</p>
-          <p className='sm:w-[80%]'>No 5, Orogun, along UI Ojoo road, Ibadan, Oyo State Nigeria</p>
+          <p className='text-[80%] lg:text-[100%] sm:w-[80%]'>No 5, Orogun, along UI Ojoo road, Ibadan, Oyo State Nigeria</p>
         </div>
         <div className='link flex flex-col md:w-[25%]'>
           <p className='font-medium'>Quick links</p>
-          <ul>
+          <ul className='text-[80%] lg:text-[100%]'>
             <li>Home</li>
             <li>Contact us</li>
             <li>About us</li>
@@ -35,7 +35,7 @@ const Footer = () => {
         </div>
         <div className='resource flex flex-col md:w-[25%]'>
           <p className='font-medium'>Resources</p>
-          <ul>
+          <ul className='text-[80%] lg:text-[100%]'>
             <li>Terms and condition</li>
             <li>Privacy Policy</li>
             <li>Cookie Policy</li>
@@ -46,7 +46,6 @@ const Footer = () => {
       <div className='flex flex-col w-[90%]'>
         <p className='text-center'>&copy; 2024 Shedahouse.com || All rights reserved</p>
         <div className='w-full bg-gray-500 h-[1px]'></div>
-        <p className='text-center'>A product of FireSwitch Technologies Ltd</p>
       </div>
         
     </footer>

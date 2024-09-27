@@ -68,7 +68,7 @@ const Homepage = () => {
 
       <div className='flex flex-col gap-10 justify-center items-center pb-10 bg-shedapagebg w-screen overflow-x-hidden md:gap-14 lg:gap-20'>
 
-        <div id='intro-div' className='flex flex-col justify-center items-center rounded-2xl bg-shedared h-[70vh] w-[90%] relative'>
+        <div id='intro-div' className='flex flex-col justify-center items-center rounded-2xl py-4 bg-shedared w-[90%] relative'>
           <div className='flex flex-col items-center gap-8 w-[95%] sm:w-[60%] md:w-[50%] lg:w-[90%]'>
           <div className='flex gap-0 lg:gap-2 items-center justify-between px-1 md:px-2 outline-white border-2 border-white rounded-xl h-8 xl:h-12 w-[80%] sm:w-[65%] md:max-w-[70%] lg:max-w-[35%] xl:w-[27%]'>
               <p className='bg-white text-gray-500 rounded-md text-[70%] w-[30%] md:text-[70%] xl:text-lg lg:w-24 text-center font-bold'>Trusted by</p>
