@@ -37,7 +37,7 @@ const Students = () => {
 
         <div className='flex items-center justify-between w-full mt-6 h-[4rem]'>
           <input type="search" name="" id="" placeholder='Search' className='rounded-md h-2/3 lg:w-[10%] xl:w-[20%] border-[1px] px-2' />
-          <div className='flex justify-between lg:w-[75%] xl:w-[50%]'>
+          <div className='flex justify-between lg:w-[75%] xl:w-[65%] 2xl:w-[50%]'>
             <div className='flex gap-2'>
               <p className='text-shedagray text-lg font-small'>Status is:</p>
               <select name="status" id="" className='rounded-md text-black bg-shedapagebg'>
@@ -70,7 +70,7 @@ const Students = () => {
               </select>
             </div>
           </div>
-          <button className='bg-shedared rounded-md text-white h-2/3 w-[10%]'>+ Add new student</button>
+          <button className='bg-shedared rounded-md text-white p-2 text-[80%] 2xl:text-[100%]'>+ Add new student</button>
         </div>
 
         <div className='w-full'>

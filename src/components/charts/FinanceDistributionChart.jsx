@@ -18,7 +18,7 @@ const FinanceDistributionChart = () => {
 ];
 
   return (
-    <div style={{ height: 400 }}>
+    <div className='h-full'>
         <ResponsiveBar
             data={data}
             keys={['2024']}

@@ -52,7 +52,7 @@ const Programs = () => {
             </div>
             
           </div>
-          <button onClick={() => navigate("/home/newprogram")} className='bg-shedared rounded-md text-white h-2/3 w-[10%]'>+ Add new program</button>
+          <button onClick={() => navigate("/home/newprogram")} className='bg-shedared rounded-md text-white p-2 text-[75%] 2xl:text-[100%]'>+ Add new program</button>
         </div>
         
         <div className='flex flex-col gap-4 lg:gap-6 w-full'>

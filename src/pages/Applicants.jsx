@@ -65,19 +65,19 @@ const Applicants = () => {
             
           </div>
 
-          <button className='bg-shedared rounded-md text-white h-2/3 w-[10%]'>+ Add new student</button>
+          <button className='bg-shedared rounded-md text-white p-2 text-[80%] 2xl:text-[100%]'>+ Add new student</button>
         </div>
 
         <div className='w-full'>
           <table className='w-full table-fixed'>
             <thead className='bg-shedapagebg rounded-md h-[3rem]'>
-              <tr>
+              <tr className=''>
                 <th className='lg:w-[3%]'><input type="checkbox" name="" id="" /></th>
                 <th className='text-shedagray text-lg font-normal text-start'>Name</th>
                 <th className='text-shedagray text-lg font-normal text-start'>Email</th>
                 <th className='text-shedagray text-lg font-normal text-start'>Recommended Program</th>
                 <th className='text-shedagray text-lg font-normal text-start'>Chosen Program</th>
-                <th className='lg:w-[10%] text-shedagray text-lg font-normal text-center'>Action</th>
+                <th className='w-[15%] text-shedagray text-lg font-normal text-center'>Action</th>
               </tr>
             </thead>
             <tbody className=''>
@@ -87,7 +87,11 @@ const Applicants = () => {
                 <td className='text-start font-medium text-shedagray'><Link to={'/home/applicantview/X0124794'}>alexoladele@gmail.com</Link></td>
                 <td className='text-start font-medium text-shedagray'>Frontend Development</td>
                 <td className='text-start font-medium text-shedagray'>Frontend Development</td>
-                <td className='text-start font-medium text-shedagray'><div className='flex  gap-2 w-3/4 lg:w-1/2 text-center font-medium'><button className='rounded-lg border-[2px] border-shedanormalblue text-shedanormalblue px-2'>Accept</button><button className='rounded-lg border-[2px] border-shedanewred text-shedanewred px-2'>Reject</button></div></td>
+                <td className='flex justify-center text-start font-medium text-shedagray w-full'>
+                  <div className='flex justify-between w-full xl:w-[70%] text-center font-medium '>
+                  <button className='rounded-lg border-[2px] border-shedanormalblue text-shedanormalblue px-2'>Accept</button>
+                  <button className='rounded-lg border-[2px] border-shedanewred text-shedanewred px-2'>Reject</button>
+                </div></td>
               </tr>
               <tr className='items-center h-[3rem] border-b-[1px] '>
                 <td className='text-center'><input type="checkbox" name="" id="" /></td>
@@ -95,7 +99,11 @@ const Applicants = () => {
                 <td className='text-start font-medium text-shedagray'><Link to={'/home/applicantview/x0124794'}>alexoladele@gmail.com</Link></td>
                 <td className='text-start font-medium text-shedagray'>Frontend Development</td>
                 <td className='text-start font-medium text-shedagray'>Frontend Development</td>
-                <td className='text-start font-medium text-shedagray'><div className='flex  gap-2 w-3/4 lg:w-1/2 text-center font-medium'><button className='rounded-lg border-[2px] border-shedanormalblue text-shedanormalblue px-2'>Accept</button><button className='rounded-lg border-[2px] border-shedanewred bg-shedanewred text-white px-0'>Rejected</button></div></td>
+                <td className='flex justify-center text-start font-medium text-shedagray w-full'>
+                  <div className='flex justify-between w-full xl:w-[70%] text-center font-medium '>
+                  <button className='rounded-lg border-[2px] border-shedanormalblue text-shedanormalblue px-2'>Accept</button>
+                  <button className='rounded-lg border-[2px] border-shedanewred bg-shedanewred text-white px-0'>Rejected</button>
+                </div></td>
               </tr>
               <tr className='items-center h-[3rem] border-b-[1px] '>
                 <td className='text-center'><input type="checkbox" name="" id="" /></td>
@@ -103,7 +111,11 @@ const Applicants = () => {
                 <td className='text-start font-medium text-shedagray'><Link to={'/home/applicantview/x0124794'}>alexoladele@gmail.com</Link></td>
                 <td className='text-start font-medium text-shedagray'>Frontend Development</td>
                 <td className='text-start font-medium text-shedagray'>Frontend Development</td>
-                <td className='text-start font-medium text-shedagray'><div className='flex  gap-2 w-3/4 lg:w-1/2 text-center font-medium'><button className='rounded-lg border-[2px] border-shedanormalblue bg-shedanormalblue text-white px-0'>Accepted</button><button className='rounded-lg border-[2px] border-shedanewred text-shedanewred px-2'>Reject</button></div></td>
+                <td className='flex justify-center text-start font-medium text-shedagray w-full'>
+                  <div className='flex justify-between w-full xl:w-[70%] text-center font-medium '>
+                  <button className='rounded-lg border-[2px] border-shedanormalblue bg-shedanormalblue text-white px-0'>Accepted</button>
+                  <button className='rounded-lg border-[2px] border-shedanewred text-shedanewred px-2'>Reject</button>
+                </div></td>
               </tr>
               <tr className='items-center h-[3rem] border-b-[1px] '>
                 <td className='text-center'><input type="checkbox" name="" id="" /></td>
@@ -111,7 +123,11 @@ const Applicants = () => {
                 <td className='text-start font-medium text-shedagray'><Link to={'/home/applicantview/x0124794'}>alexoladele@gmail.com</Link></td>
                 <td className='text-start font-medium text-shedagray'>Frontend Development</td>
                 <td className='text-start font-medium text-shedagray'>Frontend Development</td>
-                <td className='text-start font-medium text-shedagray'><div className='flex  gap-2 w-3/4 lg:w-1/2 text-center font-medium'><button className='rounded-lg border-[2px] border-shedanormalblue text-shedanormalblue px-2'>Accept</button><button className='rounded-lg border-[2px] border-shedanewred text-shedanewred px-2'>Reject</button></div></td>
+                <td className='flex justify-center text-start font-medium text-shedagray w-full'>
+                  <div className='flex justify-between w-full xl:w-[70%] text-center font-medium '>
+                  <button className='rounded-lg border-[2px] border-shedanormalblue text-shedanormalblue px-2'>Accept</button>
+                  <button className='rounded-lg border-[2px] border-shedanewred text-shedanewred px-2'>Reject</button>
+                </div></td>
               </tr>
               <tr className='items-center h-[3rem] border-b-[1px] '>
                 <td className='text-center'><input type="checkbox" name="" id="" /></td>
@@ -119,7 +135,11 @@ const Applicants = () => {
                 <td className='text-start font-medium text-shedagray'><Link to={'/home/applicantview/x0124794'}>alexoladele@gmail.com</Link></td>
                 <td className='text-start font-medium text-shedagray'>Frontend Development</td>
                 <td className='text-start font-medium text-shedagray'>Frontend Development</td>
-                <td className='text-start font-medium text-shedagray'><div className='flex  gap-2 w-3/4 lg:w-1/2 text-center font-medium'><button className='rounded-lg border-[2px] border-shedanormalblue text-shedanormalblue px-2'>Accept</button><button className='rounded-lg border-[2px] border-shedanewred text-shedanewred px-2'>Reject</button></div></td>
+                <td className='flex justify-center text-start font-medium text-shedagray w-full'>
+                  <div className='flex justify-between w-full xl:w-[70%] text-center font-medium '>
+                  <button className='rounded-lg border-[2px] border-shedanormalblue text-shedanormalblue px-2'>Accept</button>
+                  <button className='rounded-lg border-[2px] border-shedanewred text-shedanewred px-2'>Reject</button>
+                </div></td>
               </tr>
               <tr className='items-center h-[3rem] border-b-[1px] '>
                 <td className='text-center'><input type="checkbox" name="" id="" /></td>
@@ -127,7 +147,11 @@ const Applicants = () => {
                 <td className='text-start font-medium text-shedagray'><Link to={'/home/applicantview/x0124794'}>alexoladele@gmail.com</Link></td>
                 <td className='text-start font-medium text-shedagray'>Frontend Development</td>
                 <td className='text-start font-medium text-shedagray'>Frontend Development</td>
-                <td className='text-start font-medium text-shedagray'><div className='flex  gap-2 w-3/4 lg:w-1/2 text-center font-medium'><button className='rounded-lg border-[2px] border-shedanormalblue text-shedanormalblue px-2'>Accept</button><button className='rounded-lg border-[2px] border-shedanewred text-shedanewred px-2'>Reject</button></div></td>
+                <td className='flex justify-center text-start font-medium text-shedagray w-full'>
+                  <div className='flex justify-between w-full xl:w-[70%] text-center font-medium '>
+                  <button className='rounded-lg border-[2px] border-shedanormalblue text-shedanormalblue px-2'>Accept</button>
+                  <button className='rounded-lg border-[2px] border-shedanewred text-shedanewred px-2'>Reject</button>
+                </div></td>
               </tr>
               <tr className='items-center h-[3rem] border-b-[1px] '>
                 <td className='text-center'><input type="checkbox" name="" id="" /></td>
@@ -135,7 +159,11 @@ const Applicants = () => {
                 <td className='text-start font-medium text-shedagray'><Link to={'/home/applicantview/x0124794'}>alexoladele@gmail.com</Link></td>
                 <td className='text-start font-medium text-shedagray'>Frontend Development</td>
                 <td className='text-start font-medium text-shedagray'>Frontend Development</td>
-                <td className='text-start font-medium text-shedagray'><div className='flex  gap-2 w-3/4 lg:w-1/2 text-center font-medium'><button className='rounded-lg border-[2px] border-shedanormalblue text-shedanormalblue px-2'>Accept</button><button className='rounded-lg border-[2px] border-shedanewred text-shedanewred px-2'>Reject</button></div></td>
+                <td className='flex justify-center text-start font-medium text-shedagray w-full'>
+                  <div className='flex justify-between w-full xl:w-[70%] text-center font-medium '>
+                  <button className='rounded-lg border-[2px] border-shedanormalblue text-shedanormalblue px-2'>Accept</button>
+                  <button className='rounded-lg border-[2px] border-shedanewred text-shedanewred px-2'>Reject</button>
+                </div></td>
               </tr>
               <tr className='items-center h-[3rem] border-b-[1px] '>
                 <td className='text-center'><input type="checkbox" name="" id="" /></td>
@@ -143,7 +171,11 @@ const Applicants = () => {
                 <td className='text-start font-medium text-shedagray'><Link to={'/home/applicantview/x0124794'}>alexoladele@gmail.com</Link></td>
                 <td className='text-start font-medium text-shedagray'>Frontend Development</td>
                 <td className='text-start font-medium text-shedagray'>Frontend Development</td>
-                <td className='text-start font-medium text-shedagray'><div className='flex  gap-2 w-3/4 lg:w-1/2 text-center font-medium'><button className='rounded-lg border-[2px] border-shedanormalblue text-shedanormalblue px-2'>Accept</button><button className='rounded-lg border-[2px] border-shedanewred text-shedanewred px-2'>Reject</button></div></td>
+                <td className='flex justify-center text-start font-medium text-shedagray w-full'>
+                  <div className='flex justify-between w-full xl:w-[70%] text-center font-medium '>
+                  <button className='rounded-lg border-[2px] border-shedanormalblue text-shedanormalblue px-2'>Accept</button>
+                  <button className='rounded-lg border-[2px] border-shedanewred text-shedanewred px-2'>Reject</button>
+                </div></td>
               </tr>
               <tr className='items-center h-[3rem] border-b-[1px] '>
                 <td className='text-center'><input type="checkbox" name="" id="" /></td>
@@ -151,7 +183,11 @@ const Applicants = () => {
                 <td className='text-start font-medium text-shedagray'><Link to={'/home/applicantview/x0124794'}>alexoladele@gmail.com</Link></td>
                 <td className='text-start font-medium text-shedagray'>Frontend Development</td>
                 <td className='text-start font-medium text-shedagray'>Frontend Development</td>
-                <td className='text-start font-medium text-shedagray'><div className='flex  gap-2 w-3/4 lg:w-1/2 text-center font-medium'><button className='rounded-lg border-[2px] border-shedanormalblue text-shedanormalblue px-2'>Accept</button><button className='rounded-lg border-[2px] border-shedanewred text-shedanewred px-2'>Reject</button></div></td>
+                <td className='flex justify-center text-start font-medium text-shedagray w-full'>
+                  <div className='flex justify-between w-full xl:w-[70%] text-center font-medium '>
+                  <button className='rounded-lg border-[2px] border-shedanormalblue text-shedanormalblue px-2'>Accept</button>
+                  <button className='rounded-lg border-[2px] border-shedanewred text-shedanewred px-2'>Reject</button>
+                </div></td>
               </tr>
               <tr className='items-center h-[3rem] border-b-[1px] '>
                 <td className='text-center'><input type="checkbox" name="" id="" /></td>
@@ -159,7 +195,11 @@ const Applicants = () => {
                 <td className='text-start font-medium text-shedagray'><Link to={'/home/applicantview/x0124794'}>alexoladele@gmail.com</Link></td>
                 <td className='text-start font-medium text-shedagray'>Frontend Development</td>
                 <td className='text-start font-medium text-shedagray'>Frontend Development</td>
-                <td className='text-start font-medium text-shedagray'><div className='flex  gap-2 w-3/4 lg:w-1/2 text-center font-medium'><button className='rounded-lg border-[2px] border-shedanormalblue text-shedanormalblue px-2'>Accept</button><button className='rounded-lg border-[2px] border-shedanewred text-shedanewred px-2'>Reject</button></div></td>
+                <td className='flex justify-center text-start font-medium text-shedagray w-full'>
+                  <div className='flex justify-between w-full xl:w-[70%] text-center font-medium '>
+                  <button className='rounded-lg border-[2px] border-shedanormalblue text-shedanormalblue px-2'>Accept</button>
+                  <button className='rounded-lg border-[2px] border-shedanewred text-shedanewred px-2'>Reject</button>
+                </div></td>
               </tr>
               <tr className='items-center h-[3rem] border-b-[1px] '>
                 <td className='text-center'><input type="checkbox" name="" id="" /></td>
@@ -167,7 +207,11 @@ const Applicants = () => {
                 <td className='text-start font-medium text-shedagray'><Link to={'/home/applicantview/x0124794'}>alexoladele@gmail.com</Link></td>
                 <td className='text-start font-medium text-shedagray'>Frontend Development</td>
                 <td className='text-start font-medium text-shedagray'>Frontend Development</td>
-                <td className='text-start font-medium text-shedagray'><div className='flex  gap-2 w-3/4 lg:w-1/2 text-center font-medium'><button className='rounded-lg border-[2px] border-shedanormalblue text-shedanormalblue px-2'>Accept</button><button className='rounded-lg border-[2px] border-shedanewred text-shedanewred px-2'>Reject</button></div></td>
+                <td className='flex justify-center text-start font-medium text-shedagray w-full'>
+                  <div className='flex justify-between w-full xl:w-[70%] text-center font-medium '>
+                  <button className='rounded-lg border-[2px] border-shedanormalblue text-shedanormalblue px-2'>Accept</button>
+                  <button className='rounded-lg border-[2px] border-shedanewred text-shedanewred px-2'>Reject</button>
+                </div></td>
               </tr>
               <tr className='items-center h-[3rem] border-b-[1px] '>
                 <td className='text-center'><input type="checkbox" name="" id="" /></td>
@@ -175,7 +219,11 @@ const Applicants = () => {
                 <td className='text-start font-medium text-shedagray'><Link to={'/home/applicantview/x0124794'}>alexoladele@gmail.com</Link></td>
                 <td className='text-start font-medium text-shedagray'>Frontend Development</td>
                 <td className='text-start font-medium text-shedagray'>Frontend Development</td>
-                <td className='text-start font-medium text-shedagray'><div className='flex  gap-2 w-3/4 lg:w-1/2 text-center font-medium'><button className='rounded-lg border-[2px] border-shedanormalblue text-shedanormalblue px-2'>Accept</button><button className='rounded-lg border-[2px] border-shedanewred text-shedanewred px-2'>Reject</button></div></td>
+                <td className='flex justify-center text-start font-medium text-shedagray w-full'>
+                  <div className='flex justify-between w-full xl:w-[70%] text-center font-medium '>
+                  <button className='rounded-lg border-[2px] border-shedanormalblue text-shedanormalblue px-2'>Accept</button>
+                  <button className='rounded-lg border-[2px] border-shedanewred text-shedanewred px-2'>Reject</button>
+                </div></td>
               </tr>
               <tr className='items-center h-[3rem] border-b-[1px] '>
                 <td className='text-center'><input type="checkbox" name="" id="" /></td>
@@ -183,7 +231,11 @@ const Applicants = () => {
                 <td className='text-start font-medium text-shedagray'><Link to={'/home/applicantview/x0124794'}>alexoladele@gmail.com</Link></td>
                 <td className='text-start font-medium text-shedagray'>Frontend Development</td>
                 <td className='text-start font-medium text-shedagray'>Frontend Development</td>
-                <td className='text-start font-medium text-shedagray'><div className='flex  gap-2 w-3/4 lg:w-1/2 text-center font-medium'><button className='rounded-lg border-[2px] border-shedanormalblue text-shedanormalblue px-2'>Accept</button><button className='rounded-lg border-[2px] border-shedanewred text-shedanewred px-2'>Reject</button></div></td>
+                <td className='flex justify-center text-start font-medium text-shedagray w-full'>
+                  <div className='flex justify-between w-full xl:w-[70%] text-center font-medium '>
+                  <button className='rounded-lg border-[2px] border-shedanormalblue text-shedanormalblue px-2'>Accept</button>
+                  <button className='rounded-lg border-[2px] border-shedanewred text-shedanewred px-2'>Reject</button>
+                </div></td>
               </tr>
               <tr className='items-center h-[3rem] border-b-[1px] '>
                 <td className='text-center'><input type="checkbox" name="" id="" /></td>
@@ -191,7 +243,11 @@ const Applicants = () => {
                 <td className='text-start font-medium text-shedagray'><Link to={'/home/applicantview/x0124794'}>alexoladele@gmail.com</Link></td>
                 <td className='text-start font-medium text-shedagray'>Frontend Development</td>
                 <td className='text-start font-medium text-shedagray'>Frontend Development</td>
-                <td className='text-start font-medium text-shedagray'><div className='flex  gap-2 w-3/4 lg:w-1/2 text-center font-medium'><button className='rounded-lg border-[2px] border-shedanormalblue text-shedanormalblue px-2'>Accept</button><button className='rounded-lg border-[2px] border-shedanewred text-shedanewred px-2'>Reject</button></div></td>
+                <td className='flex justify-center text-start font-medium text-shedagray w-full'>
+                  <div className='flex justify-between w-full xl:w-[70%] text-center font-medium '>
+                  <button className='rounded-lg border-[2px] border-shedanormalblue text-shedanormalblue px-2'>Accept</button>
+                  <button className='rounded-lg border-[2px] border-shedanewred text-shedanewred px-2'>Reject</button>
+                </div></td>
               </tr>
             </tbody>
           </table>
