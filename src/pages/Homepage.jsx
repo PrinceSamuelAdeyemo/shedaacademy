@@ -70,9 +70,9 @@ const Homepage = () => {
 
         <div id='intro-div' className='flex flex-col justify-center items-center rounded-2xl bg-shedared h-[70vh] w-[90%] relative'>
           <div className='flex flex-col items-center gap-8 w-[95%] sm:w-[60%] md:w-[50%] lg:w-[90%]'>
-            <div className='flex gap-0 lg:gap-2 items-center justify-between px-1 md:px-2 outline-white border-2 border-white rounded-xl h-8 lg:h-12 w-[80%] sm:w-[65%] md:max-w-[70%] lg:max-w-[60%] xl:w-[27%]'>
-              <p className='text-gray-700 bg-white rounded-md text-[70%] w-[30%] md:text-[70%] lg:text-lg lg:w-24 text-center font-bold'>Trusted by</p>
-              <p className='text-shedared font-bold text-[90%] md:text-md lg:text-2xl text-center text-white'>400+ Students</p>
+          <div className='flex gap-0 lg:gap-2 items-center justify-between px-1 md:px-2 outline-white border-2 border-white rounded-xl h-8 xl:h-12 w-[80%] sm:w-[65%] md:max-w-[70%] lg:max-w-[35%] xl:w-[27%]'>
+              <p className='bg-white text-gray-500 rounded-md text-[70%] w-[30%] md:text-[70%] xl:text-lg lg:w-24 text-center font-bold'>Trusted by</p>
+              <p className='text-white font-bold text-[90%] md:text-sm text-center'>400+ Students</p>
               <div className='flex items-center z-10 relative w-[20%] md:w-[25%] lg:w-[20%] h-full'>
                 <img className='absolute h-5 lg:h-2/3' src={img1} alt="" />
                 <img className='absolute h-5 lg:h-2/3 left-3 md:left-3 lg:left-4' src={img1} alt="" />
