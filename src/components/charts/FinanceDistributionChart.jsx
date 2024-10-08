@@ -23,7 +23,7 @@ const FinanceDistributionChart = () => {
             data={data}
             keys={['2024']}
             indexBy="month"
-            margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
+            margin={{ top: 50, right: 80, bottom: 50, left: 50 }}
             padding={0.3}
             valueScale={{ type: 'linear' }}
             indexScale={{ type: 'band', round: true }}

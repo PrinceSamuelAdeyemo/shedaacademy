@@ -1,9 +1,10 @@
 //React imports
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { HelmetProvider, Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 
 //Components
+import ProgramDisplay from '../components/homepage/ProgramDisplay';
 import FAQ from '../components/FAQ';
 import Review from '../components/Review';
 import Conclusion from '../components/Conclusion';
@@ -32,20 +33,36 @@ import lv5 from "../assets/images/Vector 19.svg"
 import lv6 from "../assets/images/Vector 16.svg"
 
 import lv7 from "../assets/images/Rectangle 6.svg"
-
 import img1 from "../assets/images/Ellipse 4.png"
 // Intro side
 
 
+// API endpoints
+import {base_api, base_URL} from '../utils/base_api';
+import { programs_api } from "../utils/homepage/programs"
+
+
 const Homepage = () => {
   const navigate = useNavigate()
+  const [programsOffered, setProgramsOffered] = useState()
 
-  const tofrontend = (event) => {
-    navigate("/course/Frontend Development")
-  }
   const goToAssessment= (event) => {
     navigate("/assessmentform")
   }
+
+  const getProgramList = () => {
+    programs_api.get('programs.php')
+    .then((response) => {
+      let data = response.data["data"]
+      console.log(data)
+      setProgramsOffered(data)
+    })
+  }
+
+  useEffect(() => {
+    getProgramList()
+    console.log(programsOffered)
+  }, [])
 
   return (
     <div className="w-screen overflow-x-hidden">
@@ -151,6 +168,11 @@ const Homepage = () => {
         </div>
         <div id='courses-offering' className='flex flex-col justify-center items-center gap-4 w-[90%] lg:gap-8'>
 
+          {programsOffered?.map((program) => (
+          < ProgramDisplay program={program} icon_pic={Instagrampurple} />
+          ))
+          }
+{/* 
           <div className='flex justify-center bg-white rounded-xl py-4 w-[80%]'>
             <div className='flex flex-col w-[90%] gap-4 md:flex-row md:w-[95%]'>
               <div className='flex flex-col gap-4 w-full lg:w-[40%]'>
@@ -218,6 +240,7 @@ const Homepage = () => {
               </div>
             </div>
           </div>
+           */}
         </div>
 
         <div id='' className='flex flex-col gap-4 w-[90%] md:w-[70%] md:flex-row-reverse'>

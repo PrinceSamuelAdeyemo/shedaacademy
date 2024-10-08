@@ -1,6 +1,6 @@
 //React import
-import React from 'react'
-import { useParams } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 
 //Pages
@@ -11,8 +11,37 @@ import Info from '../components/Info'
 import CourseinfoVid from "../assets/images/Frame 103.svg"
 import Course_Courselist from '../components/Course_Courselist'
 
+// API Endpoints
+import { base_URL } from '../utils/base_api'
+import { programs_api } from '../utils/homepage/programs'
+
 const CourseInfo = () => {
+    const navigate = useNavigate()
     const { course_name } = useParams()
+    const { course_code } = useParams()
+    const [ programDetails, setProgramDetails ] = useState()
+
+
+    const getProgramDetails = () => {
+        programs_api.get('program.detail.php', {
+            params: {
+                code: `${course_code}`
+            }
+        })
+        .then(response => {
+            if (response.data["status"] === true){
+                let data = response.data["data"]
+                setProgramDetails(data)
+                console.log(data)
+            }
+            
+        })
+    }
+
+    useEffect(() => {
+        getProgramDetails()
+    }, [])
+
   return (
   
     <HelmetProvider>
@@ -36,7 +65,7 @@ const CourseInfo = () => {
         <div className='w-screen flex flex-col gap-10 justify-center items-center bg-shedapagebg overflow-x-hidden pt-16 pb-10 md:gap-14 lg:gap-10 lg:flex-row'>
             <div className='flex flex-col gap-4 w-[25%] justify-center items-center justify-self-start self-start'>
                 <div className='flex flex-col gap-4 w-[70%] md:w-[30%]'>
-                    <h1 className='w-3/4 font-semibold text-3xl'>{ course_name }</h1>
+                    <h1 className='w-3/4 font-semibold text-3xl'>{programDetails?`${programDetails.program_title}` :'' }</h1>
                     <div id='table-of-content' className='flex flex-col gap-6'>
                         <p className='font-medium text-2xl'>Overview</p>
                         <ul className='flex flex-col gap-4 font-medium text-gray-500'>
@@ -54,12 +83,17 @@ const CourseInfo = () => {
                 <div className='flex flex-col gap-10 lg:gap-20 w-[85%]'>
                     
                     <Info />
-
-                    <img src={CourseinfoVid} alt="Video of sheda house" />
+                    {
+                        programDetails ?
+                         <img src={`${base_URL}${programDetails.cover_image}`} alt={`${programDetails.program_title} cover image`} /> 
+                        :
+                        <img src={CourseinfoVid} alt='Picture of Sheda House' />
+                    }
+                    
 
                     <div>
                         <p className='font-medium text-2xl'>About</p>
-                        <p>Html CSS (Project) Conditional Statements. Javascript PHP functions and control structures PHP loops, PHP arrays Introduction to MySQL and usage of XAMPP, CRUD</p>
+                        <p>{programDetails?`${programDetails.description}` :'' }</p>
                     </div>
                     <div id='requirements' className=''>
                         <p className='font-medium text-2xl'>Requirements</p>
@@ -82,9 +116,15 @@ const CourseInfo = () => {
                         <div className='w-full text-center flex flex-col gap-3 justify-center items-center py-4 bg-white rounded-2xl'>
                             <p className='font-medium text-[1rem] text-shedagray'>Installment</p>
                             <div className='flex justify-center w-[90%]'>
-                                <h1 className='font-bold text-5xl'>₦60K</h1>
+                                {
+                                    (programDetails && programDetails.payment_type == "Installment" ) ? 
+                                    <h1 className='font-bold text-5xl'>{programDetails?`${programDetails.price}` :'' }</h1>
+                                    :
+                                    <h1></h1>
+                                }
+                                
                                 <div className='flex flex-col justify-end p-0'>
-                                    <p className='w-full m-0 text-sheda-gray font-semibold text-[0.9rem]'>/quarter (every 3 months)</p>
+                                    <p className='w-full m-0 text-sheda-gray font-semibold text-[0.9rem]'>/twice</p>
                                 </div>
                                 
                             </div>
@@ -92,16 +132,21 @@ const CourseInfo = () => {
                         <div className='w-full text-center flex flex-col gap-3 justify-center items-center py-4 bg-white rounded-2xl'>
                             <p className='font-medium text-[1rem] text-shedagray'>One-off</p>
                             <div className='flex justify-center w-[90%] '>
-                                <h1 className='font-bold text-5xl'>₦240K</h1>
+                                {
+                                    (programDetails && programDetails.payment_type == "Full" ) ? 
+                                    <h1 className='font-bold text-5xl'>{programDetails?`${programDetails.price}` :'' }</h1>
+                                    :
+                                    <h1></h1>
+                                }
                                 <div className='flex flex-col justify-end p-0'>
-                                    <p className='w-full m-0 text-sheda-gray font-semibold text-[0.9rem]'>/1 Year</p>
+                                    <p className='w-full m-0 text-sheda-gray font-semibold text-[0.9rem]'>/{programDetails?`${programDetails.duration}` :'' }</p>
                                 </div>
                                 
                             </div>
                         </div>
                     </div>
                     <Info />
-                    <Conclusion />
+                    <Conclusion program_code={course_code} />
 
                 </div>
             </div>

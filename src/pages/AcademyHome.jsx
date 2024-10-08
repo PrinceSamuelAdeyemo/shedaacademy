@@ -77,11 +77,11 @@ const AcademyHome = () => {
         <AcademySummary />
 
         <div id='charts' className='flex flex-col gap-4 mt-4'>
-          <div className='flex flex-col gap-6 lg:flex-row items-center h-[48vh]'>
-            <div className='rounded-lg border-[1px] p-4 w-full lg:w-[65%] h-full'>
+          <div className='flex flex-col gap-6 h-[96vh] items-center lg:flex-row lg:h-[48vh]'>
+            <div className='rounded-lg border-[1px] p-4 w-full lg:w-[65%] h-[50%] lg:h-full'>
               <GrowthDistributionChart />
             </div>
-            <div className='rounded-lg border-[1px] p-4 w-full lg:w-[35%] h-full'>
+            <div className='rounded-lg border-[1px] p-4 w-full lg:w-[35%] h-[46%] lg:h-full'>
               <StudentDistributionChart />
             </div>
           </div>

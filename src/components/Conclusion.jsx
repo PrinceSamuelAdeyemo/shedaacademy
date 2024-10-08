@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 
 import lv1 from "../assets/images/Vector 18.svg"
@@ -8,7 +9,13 @@ import lv4 from "../assets/images/Vector 17.svg"
 import lv5 from "../assets/images/Vector 19.svg"
 
 
-const Conclusion = () => {
+const Conclusion = ({ program_code }) => {
+  const navigate = useNavigate()
+
+  const goToAssessment = () =>{
+    navigate(`/${program_code}/assessmentform`)
+  }
+
   return (
     <div id='conclusion' className='flex justify-center items-center md:h-[45vh] md:w-full'>
     {/* <div id='conclusion' className='flex justify-center items-center md:h-[45vh] md:w-[90vw]'> */}
@@ -16,7 +23,7 @@ const Conclusion = () => {
         <h1 className='font-semibold text-2xl md:w-[50%]'>Take the first step towards a brighter future with Sheda House Academy</h1>
         <p className='font-normal md:w-[65%]'>Whether you're looking to advance your career, start a new venture, or simply explore your interests,  Your journey to success starts.</p>
         <div className='flex flex-col md:flex-row justify-center gap-4'>
-          <button className='bg-white font-semibold text-shedared rounded-[0.5rem] w-36 h-10'>Apply Now</button>
+          <button className='bg-white font-semibold text-shedared rounded-[0.5rem] w-36 h-10' onClick={goToAssessment}>Apply Now</button>
           <button className='border-2 border-white font-medium rounded-[0.5rem] w-36 h-10'>Learn more</button>
         </div>
 

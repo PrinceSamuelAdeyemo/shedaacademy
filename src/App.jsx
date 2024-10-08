@@ -39,9 +39,9 @@ function App() {
         <Route path="/" element={<Navbar />}>
           <Route exact path='/' element={<Homepage />} />
           <Route exact path='/homepage' element={<Homepage />} />
-          <Route path='/course/:course_name' element={<CourseInfo />} />
+          <Route path='/course/:course_code/:course_name' element={<CourseInfo />} />
           <Route path='/aboutus' element={<AboutUS />} />
-          <Route path='/assessmentform' element={<AssessmentForm />} />
+          <Route path='/:program_code/assessmentform' element={<AssessmentForm />} />
           <Route path='/applicationform' element={<ApplicationForm />} />
           <Route path='/sign-in' element={<Signin />} />
           <Route path='/applicationsuccessful' element={<ApplicationSuccess />} />
