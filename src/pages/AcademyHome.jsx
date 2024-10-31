@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 
 
@@ -15,6 +16,11 @@ import new_program_icon from '../assets/icons/custom-icons/solar_folder-with-fil
 
 
 const AcademyHome = () => {
+  const navigate = useNavigate()
+
+  const toPage = (page) => {
+    navigate(`${page}`)
+  }
 
   // Growth Distribution Chart
   const program_student_growth = [
@@ -58,7 +64,7 @@ const AcademyHome = () => {
               <p><img src={new_student_icon} alt="New Student" /></p>
               <p>Create new student</p>
             </div>
-            <div className='flex flex-col justify-between rounded-lg text-white p-2 bg-shedanormalpurple lg:h-[7rem] lg:w-[20%]'>
+            <div onClick={() => toPage("newprogram")} className='flex flex-col justify-between rounded-lg text-white p-2 bg-shedanormalpurple lg:h-[7rem] lg:w-[20%]'>
               <p><img src={new_program_icon} alt="New Program" /></p>
               <p>Create new program</p>
             </div>

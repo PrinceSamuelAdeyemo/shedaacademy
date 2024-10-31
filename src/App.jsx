@@ -18,6 +18,7 @@ import ApplicationSuccess from './pages/ApplicationSuccess';
 
 import AdminHomePage from './layouts/AdminHomePage';
 import AcademyHome from './pages/AcademyHome';
+import CreateAssessmentQuestion from './pages/CreateAssessmentQuestion';
 import Notifications from './pages/Notifications';
 import Students from './pages/Students';
 import AdminStudentView from './pages/AdminStudentView';
@@ -50,6 +51,7 @@ function App() {
        
         <Route path='/home' element={<AdminHomePage />} >
          <Route path='/home' element={<AcademyHome />} />
+         <Route path='/home/create-assessmentquestions' element={<CreateAssessmentQuestion />} />
          <Route path='/home/notifications' element={<Notifications />} />
          <Route path='/home/students' element={<Students />} />
          <Route path='/home/studentview/:student_id' element={<AdminStudentView />} />
@@ -62,8 +64,6 @@ function App() {
         </Route>
       </Routes>
     </Router>
-    
-
   )
 }
 

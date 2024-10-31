@@ -101,7 +101,7 @@ const Homepage = () => {
               <p>Sheda House Is a Creative Hub Located At The Heart Of Ibadan. We Are A Team of Creatives. Join Sheda House to interact, play, learn, create and discover.</p>
             </div>
             <div className='flex flex-col justify-center items-center gap-2 w-[90%] lg:flex-row md:w-[100%] lg:w-[65%] xl:w-[40%]'>
-              <button className='bg-white text-[15px] text-shedared font-bold rounded-[0.5rem] w-full lg:w-1/2  h-[6vh] px-10 z-10' onClick = {goToAssessment}>Take assessment</button>
+              <button className='bg-white text-[15px] text-shedared font-bold rounded-[0.5rem] w-full lg:w-1/2  h-[6vh] px-10 z-10' onClick = {goToAssessment}>Take assessments</button>
               <button className='text-white text-[15px] border-2 border-white rounded-[0.5rem] w-full lg:w-1/2  h-[6vh] z-10'>Download our brochure</button>
             </div>
           </div>
@@ -164,7 +164,7 @@ const Homepage = () => {
         </div>
 
         <div className=' w-[90%]'>
-          <h1 className='text-center font-semibold text-3xl'>Courses We Offer</h1>
+          <h1 className='text-center font-semibold text-3xl' id='programs-for-assessment'>Courses We Offer</h1>
         </div>
         <div id='courses-offering' className='flex flex-col justify-center items-center gap-4 w-[90%] lg:gap-8'>
 

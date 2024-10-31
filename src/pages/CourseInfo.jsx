@@ -39,7 +39,9 @@ const CourseInfo = () => {
     }
 
     useEffect(() => {
+        window.scroll(0,0)
         getProgramDetails()
+        
     }, [])
 
   return (

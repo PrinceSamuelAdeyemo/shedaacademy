@@ -1,8 +1,15 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 
 const AddNewProgram = () => {
+  const navigate = useNavigate()
+
+  const toPage = (page) => {
+    navigate(`/${page}`)
+  }
+
   return (
     <div className='flex justify-center'>
       <div className='flex flex-col gap-1 w-[97%]'>
@@ -73,7 +80,7 @@ const AddNewProgram = () => {
                 </div>
                 <div className='flex gap-2 lg:gap-4'>
                     <button className='w-1/2 h-10 rounded-lg border-[2px] border-shedared text-shedared'>Preview</button>
-                    <button className='w-1/2 h-10 rounded-lg bg-shedared text-white'>Next</button>
+                    <button className='w-1/2 h-10 rounded-lg bg-shedared text-white' onClick={() => toPage('home/create-assessmentquestions')}>Next</button>
                 </div>
             </div>
         </div>

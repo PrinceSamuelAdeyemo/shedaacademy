@@ -38,7 +38,10 @@
  */
 
  #redimage{
-    
     background-color: "B30608";
 /*     background-image: url("../images/image 17.svg");
  */ }
+
+ .blackcolor::placeholder{
+    color: #000000;
+ }
