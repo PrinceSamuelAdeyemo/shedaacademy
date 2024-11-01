@@ -5,11 +5,23 @@ import CreateAssessmentQuestionObject from '../components/CreateAssessmentQuesti
 
 const CreateAssessmentQuestion = () => {
     const [numberOfQuestions, setNumberOfQuestions] = useState(3)
-    const [questionsArray, setQuestionsArray] = useState([
-        {'id': 1, 'question': '', 'answer': ''},
-        {'id': 2, 'question': '', 'answer': ''},
-        {'id': 3, 'question': '', 'answer': ''},
-    ])
+    const [questionsObjects, setQuestionsObjects] = useState({
+      1:
+        {'id': 1,
+        'question': '',
+        'answer': ''
+      },
+      2:
+        {'id': 2,
+        'question': '',
+        'answer': ''
+      },
+      3:
+        {'id': 3,
+        'question': '',
+        'answer': ''
+      }
+    })
 
     const questions_array = []
 
@@ -46,7 +58,7 @@ const CreateAssessmentQuestion = () => {
         <div className='flex lg:gap-8 xl:gap-10 w-fullrelative'>
             <div className='flex flex-col gap-4 xl:gap-6 lg:w-[70%]'>
                 {questions_array?.map((question_object, index) => (
-                <CreateAssessmentQuestionObject index={index+1} questionsArray={questionsArray} setQuestionsArray={setQuestionsArray} />
+                <CreateAssessmentQuestionObject index={index+1} questionsObjects={questionsObjects} setQuestionsObjects={setQuestionsObjects} />
                 ))}
             </div>
             <div className='flex flex-col justify-between fixed right-7 lg:w-[23%] h-[85vh] pt-4'>
@@ -56,7 +68,17 @@ const CreateAssessmentQuestion = () => {
                         {questions_array?.map((question_object, index) => (
                             <div key={index+1} className='flex gap-4 text-shedagray hover:bg-shedapagebg'>
                                 <span className='flex justify-center text-[80%] h-6 w-6 rounded-full border-solid border-shedared border-[1px]'>{index < 9? `0${index+1}`: `${index+1}`}</span>
-                                <p>Untitled question</p>
+                                {questionsObjects[index+1]
+                                ?
+                                  (questionsObjects[index+1]['question'] == '') ?
+                                  'Untitled Question':
+                                  `${questionsObjects[index+1]['question']}`
+                                
+                                :
+                                'Untitled Question'
+                                }
+                                
+                                
                             </div>
                         ))}
                     </div>
