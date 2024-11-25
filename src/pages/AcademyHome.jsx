@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 
-
 import AcademySummary from '../components/AcademySummary'
 import GrowthDistributionChart from '../components/charts/GrowthDistributionChart'
 import StudentDistributionChart from '../components/charts/StudentDistributionChart'
@@ -17,9 +16,23 @@ import new_program_icon from '../assets/icons/custom-icons/solar_folder-with-fil
 
 const AcademyHome = () => {
   const navigate = useNavigate()
+  
+  const time_frameRef = useRef(null)
+
+  const [time_frame, setTime_frame] = useState(14);
 
   const toPage = (page) => {
     navigate(`${page}`)
+  }
+
+  const changeAcademySummaryOverviewTimeFrame = () => {
+    if (time_frameRef.current.value === "current-year"){
+      setTime_frame(365);
+    }else if (time_frameRef.current.value === "current-month"){
+      setTime_frame(30);
+    }else{
+      setTime_frame(7);
+    }
   }
 
   // Growth Distribution Chart
@@ -32,6 +45,8 @@ const AcademyHome = () => {
         {"course": "Blockchain", "count": 155}
   ]
 
+  useEffect(() => {
+  })
 
 
   return (
@@ -73,14 +88,14 @@ const AcademyHome = () => {
 
         <div className='flex justify-between items-center h-[5rem] w-full'>
           <p className='text-black text-[1.5rem] font-semibold lg:pl-10'>Overview</p>
-          <select name="period" id="" className='border-[1px] h-10 text-shedagray'>
+          <select ref={time_frameRef} onChange={changeAcademySummaryOverviewTimeFrame} name="period" id="" className='border-[1px] h-10 text-shedagray'>
             <option value="current-week">This week</option>
             <option value="current-month">This month</option>
             <option value="current-year">This year</option>
           </select>
         </div>
 
-        <AcademySummary />
+        <AcademySummary time_frame={time_frame} />
 
         <div id='charts' className='flex flex-col gap-4 mt-4'>
           <div className='flex flex-col gap-6 h-[96vh] items-center lg:flex-row lg:h-[48vh]'>

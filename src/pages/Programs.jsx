@@ -1,12 +1,48 @@
-import React from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 
 import AcademySummary from '../components/AcademySummary'
 import MainCourseInfo from '../components/MainCourseInfo'
 
+import getprograms_api from '../utils/admin/programs/getprograms'
+
 const Programs = () => {
     const navigate = useNavigate()
+
+    const time_frameRef = useRef(null)
+
+    const [time_frame, setTime_frame] = useState(14);
+    const [programsDetails, setProgramDetails] = useState([])
+
+    const changeAcademySummaryOverviewTimeFrame = () => {
+      if (time_frameRef.current.value === "current-year"){
+        setTime_frame(365);
+      }else if (time_frameRef.current.value === "current-month"){
+        setTime_frame(30);
+      }else{
+        setTime_frame(7);
+      }
+    }
+
+    const getAllPrograms = () => {
+      getprograms_api.get('', {
+        params: {
+          search:'',
+          paymentType:'',
+          page:1,
+          limit:10,
+        }
+      })
+      .then((response) => {
+        console.log(response.data)
+        setProgramDetails(response.data["data"])
+      })
+    }
+
+    useEffect(() => {
+      getAllPrograms()
+    }, [])
 
   return (
     <div className='flex justify-center'>
@@ -30,14 +66,14 @@ const Programs = () => {
 
         <div className='flex justify-between items-center h-[5rem] w-full'>
           <p className='text-black text-[1.5rem] font-semibold pl-10'>Overview</p>
-          <select name="period" id="" className='border-[1px] h-10 text-shedagray'>
+          <select onChange={changeAcademySummaryOverviewTimeFrame} name="period" id="" className='border-[1px] h-10 text-shedagray'>
             <option value="current-week">This week</option>
             <option value="current-month">This month</option>
             <option value="current-year">This year</option>
           </select>
         </div>
 
-        <AcademySummary />
+        <AcademySummary time_frame={time_frame} />
 
         <div className='flex items-center justify-between w-full mt-6 h-[4rem]'>
           <input type="search" name="" id="" placeholder='Search' className='rounded-md h-2/3 w-[20%] border-[1px] px-2' />
@@ -56,10 +92,12 @@ const Programs = () => {
         </div>
         
         <div className='flex flex-col gap-4 lg:gap-6 w-full'>
-            <MainCourseInfo />
-            <MainCourseInfo />
-            <MainCourseInfo />
-            <MainCourseInfo />
+          {
+            programsDetails?.map((program, index) => (
+              <MainCourseInfo program={program} />
+            ))
+          }
+            
         </div>
       </div>
     </div>

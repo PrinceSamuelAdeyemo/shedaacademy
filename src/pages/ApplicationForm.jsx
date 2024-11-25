@@ -3,7 +3,7 @@ import { HelmetProvider, Helmet } from "react-helmet-async"
 
 import logo from "../assets/images/logo.svg"
 
-import { base_URL } from '../utils/base_api'
+import { base_api, base_URL } from '../utils/base_api'
 import { programs_api } from '../utils/homepage/programs'
 
 const ApplicationForm = () => {
@@ -56,7 +56,7 @@ const ApplicationForm = () => {
 
     const applyForCourse = () => {
         event.preventDefault()
-        base_URL.post('auth/application.signup.php', {
+        base_api.post('auth/application.signup.php', {
             "email": "",
             "program_code": JSON.parse(sessionStorage.course_session_data)["program_code"],
             "program": JSON.parse(sessionStorage.course_session_data)["program_title"],

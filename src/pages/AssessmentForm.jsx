@@ -31,6 +31,7 @@ const AssessmentForm = () => {
             console.log(response, response.data["data"].length)
             if (response.data["status"] === true){
                 let data = response.data["data"]
+                console.log(data);
                 setAssessmentQuestions(data)
             }
         })
