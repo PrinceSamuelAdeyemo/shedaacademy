@@ -17,7 +17,7 @@ const AssessmentForm = () => {
     const navigate = useNavigate()
 
     const [assessmentQuestions, setAssessmentQuestions] = useState()
-    const [assessments, setAssessments] = useState({})
+    const [assessments, setAssessments] = useState([])
     const [errorMessage, setErrorMessage] = useState('')
     const [program_title, setProgram_title] = useState('')
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 import { FaEye, FaPen } from 'react-icons/fa'
 
-const StudentCourseInfo = () => {
+const StudentCourseInfo = ({status}) => {
   return (
     <div className='flex gap-2 md:gap-4 lg:gap-6 xl:gap-8 border-[1px] rounded-lg p-1 mb-4'>
         <div className='w-[20%] bg-shedared'>
@@ -29,16 +29,26 @@ const StudentCourseInfo = () => {
                 </div>
                 <div className='flex gap-3'>
                     <p className='text-shedagray'>Status:</p>
-                    <p className='font-semibold'>Student</p>
+                    <p className='font-semibold'>{status}</p>
                 </div>
             </div>
-            <div className='flex flex-col gap-3 justify-between items-end lg:w-[20%] h-full'>
-                <div className='flex flex-col gap-2 items-end'>
-                    <p className='flex gap-2 items-center text-shedagray'><FaEye /> View Description</p>
-                    <div className='w-3/4 lg:w-1/2 bg-gradient-to-r from-shedalightred to-shedalightred2 text-shedanewred rounded-md text-center font-medium'>Unpaid</div>
+            {
+                (status === 'Applicant')?
+                <div className='flex flex-col gap-3 justify-between items-end lg:w-[20%] h-full'>
+                    <div className='flex flex-col gap-2 items-end'>
+                        <p className='flex gap-2 items-center text-shedagray'><FaEye /> View Assessment</p>
+                    </div>
                 </div>
-                <button className='text-white bg-shedared px-2 py-2 rounded-lg opacity-10' disabled={true}>Download Certificate</button>
-            </div>
+                :
+                <div className='flex flex-col gap-3 justify-between items-end lg:w-[20%] h-full'>
+                    <div className='flex flex-col gap-2 items-end'>
+                        <p className='flex gap-2 items-center text-shedagray'><FaEye /> View Description</p>
+                        <div className='w-3/4 lg:w-1/2 bg-gradient-to-r from-shedalightred to-shedalightred2 text-shedanewred rounded-md text-center font-medium'>Unpaid</div>
+                    </div>
+                    <button className='text-white bg-shedared px-2 py-2 rounded-lg opacity-10' disabled={true}>Download Certificate</button>
+                </div>
+            }
+            
             
         </div>
     </div>

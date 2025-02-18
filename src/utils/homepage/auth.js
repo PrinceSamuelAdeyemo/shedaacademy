@@ -1,7 +1,7 @@
 import axios from "axios"
 
-const programs_api = axios.create({
-    baseURL: "https://api.shedahouse.com/v1/api/"
+const auth_api = axios.create({
+    baseURL: "https://api.shedahouse.com/v1/api/auth/"
 })
 
-export { programs_api }
+export default auth_api

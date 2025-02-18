@@ -5,10 +5,12 @@ import logo from "../assets/images/logo.svg"
 
 import { base_api, base_URL } from '../utils/base_api'
 import { programs_api } from '../utils/homepage/programs'
+import { json } from 'react-router-dom'
 
 const ApplicationForm = () => {
     const [firstpage, SetFirstpage] = useState(true)
     const [programDetails, setProgramDetails] = useState({})
+    const [assessments, setAssessments] = useState([])
 
     const firstNameRef = useRef(null)
     const lastNameRef = useRef(null)
@@ -56,27 +58,43 @@ const ApplicationForm = () => {
 
     const applyForCourse = () => {
         event.preventDefault()
-        base_api.post('auth/application.signup.php', {
-            "email": "",
+        console.log(Array.isArray(JSON.parse(sessionStorage.assessmentform)))
+        programs_api.post('auth/application.signup', {
+            "email": email,
             "program_code": JSON.parse(sessionStorage.course_session_data)["program_code"],
             "program": JSON.parse(sessionStorage.course_session_data)["program_title"],
-            "first_name": "",
-            "last_name": "",
-            "middle_name": "",
-            "phone_number": "",
-            "date_birth": "",
-            "state_origin": "",
-            "state_residence": "",
-            "highest_degree": "",
-            "assessment_answers": JSON.parse(sessionStorage.assessmentform)
+            "first_name": firstName,
+            "last_name": lastName,
+            "middle_name": middleName,
+            "phone_number": phoneNumber,
+            "date_birth": "2024-01-01",
+            "state_origin": originState,
+            "state_residence": residentialState,
+            "highest_degree": higherCertificate,
+            "assessment_answers": assessments
         })
+    }
+
+    const packageAssessmentForm = () => {
+        let assessments = JSON.parse(sessionStorage.assessmentform);
+        let assessmentsArray = []
+        for (let key in assessments){
+            assessmentsArray.push({question: key, answer: assessments[key]})
+        }
+        console.log(assessmentsArray)
+        setAssessments(assessmentsArray)
     }
 
     useEffect(() => {
         window.scroll(0,0)
         console.log(sessionStorage.course_session_data)
+        packageAssessmentForm()
         getProgramDetails()
         console.log(programDetails)
+        console.log(sessionStorage.assessmentform)
+        console.log(typeof(sessionStorage.assessmentform))
+        console.log(Array.isArray(sessionStorage.assessmentform))
+        console.log(Array.isArray(JSON.parse(sessionStorage.assessmentform)))
     }, [])
 
   return (
@@ -112,7 +130,7 @@ const ApplicationForm = () => {
                         <label htmlFor='last_name'>Last Name</label>
                         <input id='last_name' ref={lastNameRef} value={lastName} onChange={(e) => setLastName(lastNameRef.current.value)} className='w-full shadow text-4xl bg-gray-100' type="text" required />
                         <label htmlFor='middle_name'>Middle Name</label>
-                        <input id='middle_name' ref={middleNameRef} className='w-full shadow text-4xl bg-gray-100' type="text" required />
+                        <input id='middle_name' ref={middleNameRef} value={middleName} onChange={(e) => setMiddleName(middleNameRef.current.value)} className='w-full shadow text-4xl bg-gray-100' type="text" required />
                         <label htmlFor='email'>Email Address</label>
                         <input id='email' ref={emailRef} value={email} onChange={(e) => setEmail(emailRef.current.value)} className='w-full shadow text-4xl bg-gray-100' type="email" required />
                         <label htmlFor='phone_number'>Phone Number</label>

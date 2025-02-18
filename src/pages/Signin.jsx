@@ -1,16 +1,45 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { HelmetProvider, Helmet } from "react-helmet-async"
+import { useNavigate } from 'react-router-dom'
 
 import logo from "../assets/images/logo.svg"
 import "../assets/styles/all.css"
 
 import BGImg from "../assets/images/Sheda Academy - Sign in form.png"
 
-const Signin = () => {
-    const [firstpage, SetFirstpage] = useState(true)
+import auth_api from '../utils/homepage/auth'
 
-    const togglepage = () => {
-        SetFirstpage(!firstpage);
+const Signin = () => {
+    const navigate = useNavigate()
+    const [firstpage, SetFirstpage] = useState(true)
+    const emailRef = useRef(null)
+    const passwordRef = useRef(null)
+
+
+    const loginToDashboard = (event) => {
+        event.preventDefault()
+        console.log(emailRef.current.value)
+        console.log(passwordRef.current.value)
+        if (/^\S*$/.test(emailRef.current.value) && /^\S*$/.test(passwordRef.current.value)){
+            try {
+                auth_api.post('login', {
+                    "email": emailRef.current.value,
+                    "password": passwordRef.current.value
+                })
+                .then((response) => {
+                    console.log(response)
+                    if (response.data["status"] === true){
+                        if (response.data["data"]["applicant_id"]){
+                            let applicant_id = response.data["data"]["applicant_id"]
+                            localStorage.setItem('user', JSON.stringify({"applicant_id": applicant_id}))
+                            navigate('/academy')
+                        }
+                    }
+                })
+            } catch (error) {
+                
+            }
+        }
     }
 
   return (
@@ -38,16 +67,16 @@ const Signin = () => {
                 <a className='navbar-logo-tag flex text-white' href='/'><img className='navbar-logo' src="" alt="" />ACADEMY</a>
             </div>
             <div className='formdiv flex flex-col justify-center items-center w-full'>
-                <form className='w-[90%] md:w-[75%] lg:w-[40%] bg-shedapagebg shadow rounded-xl flex flex-col items-center justify-center gap-6 pt-10 pb-5 px-10'>
+                <form onSubmit={loginToDashboard} className='w-[90%] md:w-[75%] lg:w-[40%] bg-shedapagebg shadow rounded-xl flex flex-col items-center justify-center gap-6 pt-10 pb-5 px-10'>
                     <p className='font-semibold w-full text-center'>Sign in</p>
                     <div className='w-full'>
                         <p>Email Address</p>
-                        <input className='w-full shadow text-4xl bg-gray-100' type="text" />
+                        <input ref={emailRef} className='w-full shadow text-4xl bg-gray-100' type="email" required />
                         <p>Password</p>
-                        <input className='w-full shadow text-4xl bg-gray-100' type="password" />
+                        <input ref={passwordRef} className='w-full shadow text-4xl bg-gray-100' type="password" required />
                     </div>
 
-                    <button className='text-white bg-shedared w-[15%] h-[2.5rem] rounded-xl'>Next</button>
+                    <button type='submit' className='text-white bg-shedared !w-fit px-2 h-[2.5rem] rounded-xl'>Login</button>
                     <a href="/forgotpassword" className='text-shedared font-semibold underline'>Forgot password</a>
                     
                     

@@ -16,6 +16,7 @@ const Assessments = ({ key, assessments, setAssessments, question, setErrorMessa
         setAssessments((prevValues) => ({
             ...prevValues, [question]: assessmentAnswerRef.current.value
         }))
+        console.log(Array.isArray(assessments))
     }
 
     useEffect(() => {

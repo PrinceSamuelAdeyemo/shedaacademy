@@ -15,6 +15,7 @@ import ApplicationForm from './pages/ApplicationForm';
 import Signin from './pages/Signin';
 import ForgotPassword from './pages/ForgotPassword';
 import ApplicationSuccess from './pages/ApplicationSuccess';
+import VerifyEmail from './pages/VerifyEmail';
 
 import AdminHomePage from './layouts/AdminHomePage';
 import AcademyHome from './pages/AcademyHome';
@@ -28,6 +29,9 @@ import Applicants from './pages/Applicants';
 import Instructors from './pages/Instructors';
 import AddNewProgram from './pages/AddNewProgram';
 import Settings from './pages/Settings';
+
+// Students
+import StudentHomepage from './pages/Students/StudentHomepage';
 
 //Styling
 import "../src/assets/styles/all.css"
@@ -44,9 +48,10 @@ function App() {
           <Route path='/aboutus' element={<AboutUS />} />
           <Route path='/:program_code/assessmentform' element={<AssessmentForm />} />
           <Route path='/applicationform' element={<ApplicationForm />} />
-          <Route path='/sign-in' element={<Signin />} />
+          <Route path='/login' element={<Signin />} />
           <Route path='/applicationsuccessful' element={<ApplicationSuccess />} />
           <Route path='/forgotpassword' element={<ForgotPassword />} />
+          <Route path='/verify-email' element={<VerifyEmail />} />
         </Route>
        
         <Route path='/home' element={<AdminHomePage />} >
@@ -61,6 +66,9 @@ function App() {
          <Route path='/home/newprogram' element={<AddNewProgram />} />
          <Route path='/home/instructors' element={<Instructors />} />
          <Route path='/home/settings' element={<Settings />} />
+        </Route>
+
+        <Route path='/academy' element={<StudentHomepage />} >
         </Route>
       </Routes>
     </Router>
