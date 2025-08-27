@@ -1,15 +1,41 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { HelmetProvider, Helmet } from "react-helmet-async"
+import { useNavigate } from 'react-router-dom'
+
 import "../assets/styles/all.css"
 
+import auth_api from '../utils/homepage/auth'
 import logo from "../assets/images/logo.svg"
 
 
 const ForgotPassword = () => {
+    const navigate = useNavigate();
     const [firstpage, SetFirstpage] = useState(true)
+    const [errorMessage, setErrorMessage] = useState('')
+    const emailRef = useRef(null);
 
     const togglepage = () => {
         SetFirstpage(!firstpage);
+    }
+
+    const requestOTP = (event) => {
+        event.preventDefault();
+        auth_api.post('reset.password.php', {
+            email: emailRef.current.value
+        })
+        .then((response) => {
+            if (response.data["status"] === true){
+                setErrorMessage("An OTP has been sent to your email address, kindly check while we redirect you to the next page....")
+                navigate('/setpassword', {
+                    state: {
+                        email: emailRef.current.value
+                    }
+                })
+            }
+            else{
+                setErrorMessage("An error occurred!")
+            }
+        })
     }
 
   return (
@@ -37,12 +63,12 @@ const ForgotPassword = () => {
                 <a className='navbar-logo-tag flex text-white' href='/'><img className='navbar-logo' src="" alt="" />ACADEMY</a>
             </div>
             <div className='formdiv flex flex-col justify-center items-center w-full'>
-                <form className='w-[90%] md:w-[75%] lg:w-[40%] bg-shedapagebg shadow rounded-xl flex flex-col items-center justify-center gap-6 pt-10 pb-5 px-10'>
+                <form method='POST' onSubmit={requestOTP} className='w-[90%] md:w-[75%] lg:w-[40%] bg-shedapagebg shadow rounded-xl flex flex-col items-center justify-center gap-6 pt-10 pb-5 px-10'>
                     <p className='font-semibold'>Forgot Password</p>
                     <p>Enter the email address you used to  create an account, and you will receive a link to reset your password.</p>
                     <div className='w-full'>
                         <p>Email Address</p>
-                        <input className='w-full shadow text-4xl bg-gray-100' type="text" />
+                        <input ref={emailRef} className='w-full shadow text-4xl bg-gray-100' type="email" />
                         
                     </div>
 
