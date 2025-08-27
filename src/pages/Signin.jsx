@@ -71,9 +71,9 @@ const Signin = () => {
                     <p className='font-semibold w-full text-center'>Sign in</p>
                     <div className='w-full'>
                         <p>Email Address</p>
-                        <input ref={emailRef} className='w-full shadow text-4xl bg-gray-100' type="email" required />
+                        <input ref={emailRef} className='w-full shadow text-xl px-2 bg-gray-100' type="email" required />
                         <p>Password</p>
-                        <input ref={passwordRef} className='w-full shadow text-4xl bg-gray-100' type="password" required />
+                        <input ref={passwordRef} className='w-full shadow text-xl px-2 bg-gray-100' type="password" required />
                     </div>
 
                     <button type='submit' className='text-white bg-shedared !w-fit px-2 h-[2.5rem] rounded-xl'>Login</button>
