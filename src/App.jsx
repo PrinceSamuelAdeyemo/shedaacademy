@@ -14,6 +14,7 @@ import AssessmentForm from './pages/AssessmentForm';
 import ApplicationForm from './pages/ApplicationForm';
 import Signin from './pages/Signin';
 import ForgotPassword from './pages/ForgotPassword';
+import SetPassword from './pages/SetPassword'
 import ApplicationSuccess from './pages/ApplicationSuccess';
 import VerifyEmail from './pages/VerifyEmail';
 
@@ -51,6 +52,7 @@ function App() {
           <Route path='/login' element={<Signin />} />
           <Route path='/applicationsuccessful' element={<ApplicationSuccess />} />
           <Route path='/forgotpassword' element={<ForgotPassword />} />
+          <Route path='/setpassword' element={<SetPassword />} />
           <Route path='/verify-email' element={<VerifyEmail />} />
         </Route>
        

@@ -68,7 +68,7 @@ const ForgotPassword = () => {
                     <p>Enter the email address you used to  create an account, and you will receive a link to reset your password.</p>
                     <div className='w-full'>
                         <p>Email Address</p>
-                        <input ref={emailRef} className='w-full shadow text-4xl bg-gray-100' type="email" />
+                        <input ref={emailRef} className='w-full shadow text-4xl bg-gray-100' type="email" required />
                         
                     </div>
 

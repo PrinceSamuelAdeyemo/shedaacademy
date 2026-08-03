@@ -25,12 +25,17 @@ const CreateAssessmentQuestion = () => {
 
     const questions_array = []
 
+    // Never delete, used to keep the mapping possible in some part of this page.
     for (let i=0; i < numberOfQuestions; i++){
-        questions_array.push("a")
+        questions_array.push(i+1)
     }
 
     const assessmentScroll = (event) => {
         event.stopPropagation()
+    }
+
+    const publishNewCourse = () => {
+      
     }
 
     useEffect(() => {

@@ -38,8 +38,8 @@ const AddNewProgram = () => {
     })
     .then((response => {
       console.log(response)
-
-      toPage('home/create-assessmentquestions')
+      console.log(response.data)
+      //toPage('home/create-assessmentquestions')
     }))
     .catch((error) => {
       console.log(error)
